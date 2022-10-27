@@ -35,7 +35,7 @@ const NavBar = () => {
                 </Link>
               </li>
               <li className="nav-item active text-center">
-                <Link className="nav-link" to="/postproperty">
+                <Link className="nav-link" to="/postyourproperty">
                   Post Property
                 </Link>
               </li>
