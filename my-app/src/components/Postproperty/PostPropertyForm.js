@@ -1,5 +1,6 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import "./postprop.css";
+import Progressbar from '../Progress_bar';
 import AreaDetail from './Postpropform_comp/AreaDetail';
 import BasicDetails from './Postpropform_comp/BasicDetails';
 import LocationDetails from './Postpropform_comp/LocationDetails';
@@ -7,6 +8,11 @@ import PostPhoto from './Postpropform_comp/PostPhoto';
 import RoomDetails from './Postpropform_comp/RoomDetails';
 import TellAboutProp from './Postpropform_comp/TellAboutProp';
 const PostPropertyForm = () => {
+    //progress
+    const [progress, setProgress] = useState(0)
+    //
+    
+
     //formdata
     let fdata2={
         city:"",
@@ -36,17 +42,25 @@ const PostPropertyForm = () => {
     const [page, setpage] = useState(1)
     const [fields, setfields] = useState(fdata2)
     const handleNext=(e)=>{
+        setTimeout(() => {
+            setpage(page+1);
+        }, 100);
+        
+        
+        setProgress(progress + 18)
+        
+
         e.preventDefault();
         console.log(fields)
-        setpage(page+1);
+        
     }
     const handlePrev=(e)=>{
+        setProgress(progress-18)
         e.preventDefault();
         setpage(page-1);
     }
     const handleSubmit=(e)=>{
         e.preventDefault();
-        alert("lfff")
     }
     const handleChange=(e)=>{
         const name=e.target.name
@@ -83,13 +97,19 @@ const PostPropertyForm = () => {
   return (
     <><form action="/post" method="post" onSubmit={handleSubmit} encType="multipart/form-data">
     <div className="form-body">
+    
       <div className="initial-container">
-        <div className="transparent_bg">
+        
+        <div className="transparent_bg mb-0">
             <p className="italic_font" style={{"textAlign": "center", "margin": "0px", "fontSize": "30px"}}> <b>Begin posting your
                     property</b> </p>
         </div>
+
+        <div  style={{"height":"3px"}}>
+            <Progressbar bgcolor="orange" progress={progress}  height={3} />
+        </div>
         {pageChanger()}
-       
+        
 
         
         <div className='row ' style={{"textAlign": "center"}}>

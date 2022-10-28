@@ -5,7 +5,7 @@ const TellAboutProp = (props) => {
   const{property_title,abt_property,property_age}=fdata
   return (
     <>
-    <div class="transparent_bg pt-2 pb-5">
+    <div class="transparent_bg pt-2 pb-5 mt-0">
             <p class="italic_font " style={{"textAlign": "center","margin":" 0px","fontSize": "33px"}}> <b>Tell us about your property </b>
             </p>
             <br/>

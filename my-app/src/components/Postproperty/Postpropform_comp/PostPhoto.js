@@ -5,7 +5,7 @@ const PostPhoto = (props) => {
   const{price,owner_name,phoneno,isimg,image_file,image}=fdata
   return (
     <>
-    <div className="form_element_box">
+    <div className="form_element_box mt-0">
             <p className="italic_font" style={{"textAlign": "center","margin":" 0px","fontSize": "25px"}}> <b>Upload Photo</b>
             </p>
         </div>
