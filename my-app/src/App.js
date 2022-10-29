@@ -14,6 +14,7 @@ import Admin_ContactUs from "./components/Admin_Portal/Admin_ContactUs";
 
 
 
+import Filter from "./components/Filter/Filter";
 function App() {
   return (
     <>
@@ -32,6 +33,7 @@ function App() {
 
           <Route exact path="/Admin_home" element={<Admin_home />} />
           <Route exact path="/Admin_user" element={<Admin_user />} />
+          <Route exact path="/search" element={<Filter />} />
           <Route exact path="/Admin_property" element={<Admin_property />} />
           <Route exact path="/Admin_ContactUs" element={<Admin_ContactUs />} />
 

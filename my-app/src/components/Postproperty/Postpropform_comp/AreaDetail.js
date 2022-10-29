@@ -5,7 +5,7 @@ const AreaDetail = (props) => {
   const{area,Area_Unit}=fdata
   return (
     <>
-    <div className="form_element_box">
+    <div className="form_element_box  mt-0">
             <p className="italic_font" style={{"textAlign": "center","margin": "0px","fontSize": "25px"}}> <b>Add Area
                     Details</b> </p>
         </div>

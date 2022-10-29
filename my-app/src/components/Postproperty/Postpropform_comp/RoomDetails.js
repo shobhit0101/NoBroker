@@ -6,7 +6,7 @@ const RoomDetails = (props) => {
     const {bedrooms,Bathrooms,Balconies,floorno}=fdata;
   return (
     <>
-    <div className="form_element_box">
+    <div className="form_element_box mt-0">
             <p className="italic_font" style={{"textAlign": "center", "margin": "0px","fontSize": "25px"}}> <b>Add Room
                 Details</b> </p>
         </div>

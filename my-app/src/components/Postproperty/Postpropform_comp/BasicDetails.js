@@ -5,7 +5,7 @@ const BasicDetails = (props) => {
   const{purpose,prop_cat}=fdata
   return (
     <>
-      <div className="transparent_bg">
+      <div className="transparent_bg mt-0">
         <p
           className="italic_font"
           style={{ textAlign: "center", margin: "0px" }}
