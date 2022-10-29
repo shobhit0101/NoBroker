@@ -1,0 +1,25 @@
+.home-content h3 {
+    margin-left: 260px;
+    margin-top: 150px;
+}
+
+.cardlist-div {
+    border-radius: 11px;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 35px 35px 70px #c2c2c2,
+        -35px -35px 70px #ffffff;
+    /* height: 280px; */
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.directory-dic {
+    border-radius: 6px;
+background: #ffffff;
+box-shadow: inset 12px 12px 53px #bfbfbf,
+            inset -12px -12px 53px #ffffff;
+}
+
+
+
