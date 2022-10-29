@@ -28,9 +28,6 @@ function App() {
           <Route exact path="/about" element={<About />} />
           <Route exact path="/postyourproperty" element={<PostPropertyForm />} />
           <Route exact path="/login" element={<Login />} />
-
-
-
           <Route exact path="/Admin_home" element={<Admin_home />} />
           <Route exact path="/Admin_user" element={<Admin_user />} />
           <Route exact path="/search" element={<Filter />} />

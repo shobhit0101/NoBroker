@@ -10,10 +10,20 @@ const Admin_home = () => {
     return (
         <>
             <Admin_Navbar></Admin_Navbar>
-            <div className="Admin_portal_container">
+            {/* <div className="Admin_portal_container">
                 <h2 className="Admin_portal_text">Admin Portal</h2>
                 <h2 className="Admin_portal_text">Admin Portal</h2>
+            </div> */}
+            <div className="new_Admin_portal_container">
+                <div class="bg"></div>
+                <div class="bg bg2"></div>
+                <div class="bg bg3"></div>
+                <div class="content">
+                    <p className="Admin_portal_text">Admin Portal</p>
+                </div>
             </div>
+
+
             <div className="admin_card_container">
                 <div className="admin_card">
                     <div className="admin_minicard">
