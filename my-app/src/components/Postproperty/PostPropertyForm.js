@@ -112,12 +112,12 @@ const PostPropertyForm = () => {
         
 
         
-        <div className='row ' style={{"textAlign": "center"}}>
-            {page!==1&&<div className="col-4">
+        <div className='row justify-content-between' style={{"textAlign": "center"}}>
+            <div className="col-4">
 
                 <button onClick={handlePrev} className="btn btn-outline-dark"
-                    style={{"padding": "5px 10vh","border": "3px solid black"}}> <b>Previous</b></button>
-            </div>}
+                    style={{"padding": "5px 10vh","border": "3px solid black"}} disabled={page===1?1:0}> <b>Previous</b></button>
+            </div>
             <div className="col-4">
 
                 {page!==6&&<button onClick={handleNext}  className="btn btn-outline-dark"

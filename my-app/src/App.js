@@ -7,16 +7,18 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import PostPropertyForm from "./components/Postproperty/PostPropertyForm";
 import Login from "./components/Login.js";
+import Filter from "./components/Filter/Filter";
 function App() {
   return (
     <>
-      <Router>
+      <Router>        
         <NavBar />
 
         <Routes>
           <Route exact path="/about" element={<About />} />
           <Route exact path="/postyourproperty" element={<PostPropertyForm />} />
           <Route exact path="/login" element={<Login />} />
+          <Route exact path="/search" element={<Filter />} />
           <Route exact path="/" element={<Home />} />
             
         </Routes>
