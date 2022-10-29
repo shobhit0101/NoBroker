@@ -8,21 +8,23 @@ import Footer from "./components/Footer";
 import PostPropertyForm from "./components/Postproperty/PostPropertyForm";
 import Login from "./components/Login.js";
 import Filter from "./components/Filter/Filter";
+import Markonmap from "./components/Postproperty/Postpropform_comp/Markonmap";
 function App() {
   return (
     <>
       <Router>        
-        <NavBar />
+        {/* <NavBar /> */}
 
         <Routes>
           <Route exact path="/about" element={<About />} />
           <Route exact path="/postyourproperty" element={<PostPropertyForm />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/search" element={<Filter />} />
+          <Route exact path="/map" element={<Markonmap />} />
           <Route exact path="/" element={<Home />} />
             
         </Routes>
-        <Footer/>
+        {/* <Footer/> */}
       </Router>
     </>
   );

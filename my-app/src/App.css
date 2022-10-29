@@ -8,6 +8,10 @@
     margin: 0;
     padding: 0;
 }
+.leaflet-container {
+    width: 100wh; 
+    height: 100vh;
+  }
 .topnav{
     background-color: #000000;  
    

@@ -7,6 +7,7 @@ import LocationDetails from './Postpropform_comp/LocationDetails';
 import PostPhoto from './Postpropform_comp/PostPhoto';
 import RoomDetails from './Postpropform_comp/RoomDetails';
 import TellAboutProp from './Postpropform_comp/TellAboutProp';
+import Markonmap from './Postpropform_comp/Markonmap';
 const PostPropertyForm = () => {
     //progress
     const [progress, setProgress] = useState(0)
@@ -36,7 +37,9 @@ const PostPropertyForm = () => {
         Area_Unit:'',
         image_file:{},
         image:{},
-        isimg:0
+        isimg:0,
+        lat:52.0,
+        lng:-0.9
     }
     //
     const [page, setpage] = useState(1)
@@ -47,7 +50,7 @@ const PostPropertyForm = () => {
         }, 100);
         
         
-        setProgress(progress + 18)
+        setProgress(progress + 15)
         
 
         e.preventDefault();
@@ -80,17 +83,20 @@ const PostPropertyForm = () => {
         if(page===2){
             return <LocationDetails fdata={fields}  handleChange={handleChange}/>
         }
-        if(page===3){
+        if(page===4){
             return <RoomDetails fdata={fields}  handleChange={handleChange}/>
         }
-        if(page===4){
+        if(page===5){
             return <AreaDetail fdata={fields} handleChange={handleChange}/>
         }
-        if(page===5){
+        if(page===6){
             return <TellAboutProp fdata={fields} setfdata={setfields} handleChange={handleChange}/>
         }
-        if(page===6){
+        if(page===7){
             return <PostPhoto fdata={fields} handleChange={handleChange} handleChange_file={handleChange_file} />
+        }
+        if(page===3){
+            return <Markonmap fdata={fields} setfdata={setfields}  />
         }
 
     }
@@ -120,9 +126,9 @@ const PostPropertyForm = () => {
             </div>
             <div className="col-4">
 
-                {page!==6&&<button onClick={handleNext}  className="btn btn-outline-dark"
+                {page!==7&&<button onClick={handleNext}  className="btn btn-outline-dark"
                     style={{"padding": "5px 10vh","border": "3px solid black"}}> <b>Next</b></button>}
-                {page===6&&<button type="submit"   className="btn btn-outline-dark"
+                {page===7&&<button type="submit"   className="btn btn-outline-dark"
                     style={{"padding": "5px 10vh","border": "3px solid black"}}> <b>Submit</b></button>}
             </div>
             
