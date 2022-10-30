@@ -1,4 +1,5 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect,useContext} from 'react';
+import {useNavigate} from 'react-router-dom';
 import "./postprop.css";
 import Progressbar from '../Progress_bar';
 import AreaDetail from './Postpropform_comp/AreaDetail';
@@ -8,11 +9,19 @@ import PostPhoto from './Postpropform_comp/PostPhoto';
 import RoomDetails from './Postpropform_comp/RoomDetails';
 import TellAboutProp from './Postpropform_comp/TellAboutProp';
 import Markonmap from './Postpropform_comp/Markonmap';
+import propertyContext from '../../context/property/propertyContext';
 const PostPropertyForm = () => {
+    //navigation
+    const navigate=useNavigate()
+    //
+
     //progress
     const [progress, setProgress] = useState(0)
     //
-    
+    //useContext
+    const context=useContext(propertyContext)
+    const{prop,setProp}=context
+    //
 
     //formdata
     let fdata2={
@@ -38,8 +47,8 @@ const PostPropertyForm = () => {
         image_file:{},
         image:{},
         isimg:0,
-        lat:52.0,
-        lng:-0.9
+        lat:28.5,
+        lng:76.9
     }
     //
     const [page, setpage] = useState(1)
@@ -64,6 +73,10 @@ const PostPropertyForm = () => {
     }
     const handleSubmit=(e)=>{
         e.preventDefault();
+        console.log(fields)
+        setProp(prop.concat(fields))
+        console.log(prop)
+        navigate('/search')
     }
     const handleChange=(e)=>{
         const name=e.target.name

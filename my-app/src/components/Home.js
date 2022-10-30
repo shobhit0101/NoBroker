@@ -1,7 +1,6 @@
 import React from "react";
 import SearchHeader from "./SearchHeader";
 import "../App.css";
-import Footer from "./Footer";
 const Home = () => {
   return (
     <>
