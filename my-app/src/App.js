@@ -21,27 +21,26 @@ function App() {
   return (
     <>
       <PropState>
-      <Router>
-
-        
-        <Routes>
+        <Router>
 
 
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/home" element={<Home />} />
-
-          <Route exact path="/postyourproperty" element={<PostPropertyForm />} />
-          <Route exact path="/Admin_home" element={<Admin_home />} />
-          <Route exact path="/Admin_user" element={<Admin_user />} />
-          <Route exact path="/search" element={<Search />} />
-          <Route exact path="/Admin_property" element={<Admin_property />} />
-          <Route exact path="/Admin_ContactUs" element={<Admin_ContactUs />} />
-          <Route exact path="/Auth" element={<Authentication />} />
+          <Routes>
 
 
-        </Routes>
-        <NavBar/>
-      </Router>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/home" element={<Home />} />
+
+            <Route exact path="/postyourproperty" element={<PostPropertyForm />} />
+            <Route exact path="/Admin_home" element={<Admin_home />} />
+            <Route exact path="/Admin_user" element={<Admin_user />} />
+            <Route exact path="/search" element={<Search />} />
+            <Route exact path="/Admin_property" element={<Admin_property />} />
+            <Route exact path="/Admin_ContactUs" element={<Admin_ContactUs />} />
+            <Route exact path="/Auth" element={<Authentication />} />
+
+
+          </Routes>
+        </Router>
       </PropState>
     </>
   );
