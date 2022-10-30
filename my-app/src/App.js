@@ -42,7 +42,7 @@ function App() {
 
 
         </Routes>
-        <NavBar/>
+        
       </Router>
       </PropState>
     </>

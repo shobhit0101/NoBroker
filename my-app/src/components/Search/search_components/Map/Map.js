@@ -5,15 +5,17 @@ import { MapContainer, TileLayer, useMap,Marker,Popup,useMapEvents } from 'react
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import L from 'leaflet';
+import LocationCard from './LocationCard/LocationCard ';
 let DefaultIcon = L.icon({
     iconUrl: icon,
-    shadowUrl: iconShadow
+    shadowUrl: iconShadow,
+    iconSize: new L.Point(25, 35)
 });
 
 L.Marker.prototype.options.icon = DefaultIcon;
 
 const Map = (props) => {
-    const{lat,lng}=props
+    const{lat,lng,data}=props
     // const map = useMap();
     // useEffect(() => {
     //   map.flyTo([lat,lng], 13);
@@ -37,11 +39,17 @@ const Map = (props) => {
       
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
-    <Marker position={[lat,lng]}>
-      <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
+    {data!==null&&<Marker position={[lat,lng]}>
+      <div className="container" style={{"width":"30px"}}>
+      <Popup >
+        
+      
+      
+        <LocationCard data={data}/>
+        
       </Popup>
-    </Marker>
+      </div>
+    </Marker>}
     <FlyMapTo center={[lat,lng]} zoom={13} />
   </MapContainer>
     </>

@@ -1,5 +1,6 @@
 import React, { useContext,useState,useEffect } from 'react'
 import propertyContext from '../../context/property/propertyContext';
+import Navigation from '../../routes/navigation/navigation.component';
 import "./Filter.css";
 const Filter = (props) => {
     const{res,setres}=props
@@ -65,7 +66,8 @@ const Filter = (props) => {
     }
     const handleSubmit=()=>{}
   return (
-    <>
+    <>  
+
         <form action="/post" method="post" onSubmit={handleSubmit} encType="multipart/form-data">
             <div className="container">
                 <div className="container d-flex justify-content-between">
@@ -278,6 +280,7 @@ const Filter = (props) => {
         
             </div>
         </form>
+        <Navigation/>
     </>
   )
 }

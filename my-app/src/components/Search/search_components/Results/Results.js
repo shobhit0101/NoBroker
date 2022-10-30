@@ -1,17 +1,34 @@
 import React from 'react'
+import { useState,useEffect } from 'react';
 import Card from '../Card/Card';
 import './Results.css';
 const Results = (props) => {
-  const{res,coords,setcoords}=props
+  const{res,setres,coords,setcoords,data,setdata}=props
+  const [curres, setcurres] = useState(res)
+  const [search, setsearch] = useState('')
+  const filterop=()=>{
+    let r=res.filter(e=>{
+      return(e.property_title===search || search==='')
+    })
+    setcurres(r)
+  }
+  
+  const handleClick=(e)=>{
+    e.preventDefault()
+    filterop();
+  }
+  const handleChange=(e)=>{
+    setsearch(e.target.value)
+  }
   return (
     <>
       <div className="container">    
-     <form action="">
+     <form action="/post">
           <div className="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
             <div className="input-group">
-              <input type="search" placeholder="Search for City..." aria-describedby="button-addon1" className="form-control border-0 bg-light"/>
+              <input type="text" onChange={handleChange} value={search} name='search' id='search' placeholder="Search by Property..." aria-describedby="button-addon1" className="form-control border-0 bg-light"/>
               <div className="input-group-append">
-                <button id="button-addon1" type="submit" className="btn btn-link text-primary"><i className="fa fa-search"></i></button>
+                <button id="button-addon1" onClick={handleClick}  className="btn btn-link text-primary"><i className="fa fa-search"></i></button>
               </div>
             </div>
           </div>
@@ -19,8 +36,8 @@ const Results = (props) => {
       </form>
       </div> 
        
-      {res.map((e)=>{return(<div className="container">
-        <Card data={e} coords={coords} setcoords={setcoords}/>
+      {curres.length===0?<div className="container px-3">Sorry, No Matches avilable</div>:curres.map((e)=>{return(<div className="container">
+        <Card data={e} coords={coords} setcoords={setcoords} curdata={data} setcurdata={setdata}/>
       </div>)})} 
       {/* <div className="container">
         <Card/>
