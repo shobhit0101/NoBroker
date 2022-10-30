@@ -1,5 +1,5 @@
 import "./search-container.styles.css"
-
+import { Link } from "react-router-dom";
 
 const SearchContainer = () => {
     return (
@@ -11,12 +11,12 @@ const SearchContainer = () => {
                     <button type="button" className="btn btn-primary categories">PG</button>
                     <button type="button" className="btn btn-primary categories">Commercial</button>
                 </div>
-                <form className="d-flex submit" action="/search" method="post">
-                    <div className="dropdown dropstart">
-                        <a className="btn dropdown-toggle location" href="#" role="button" id="dropdownMenuLink"
+                <form className="d-flex submit " style={{ margin: "2vh" }} action="/search" method="post">
+                    <div className="btn dropdown dropstart location">
+                        <Link className=" dropdown-toggle " href="#" role="button" id="dropdownMenuLink"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Location
-                        </a>
+                        </Link>
 
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <li><a className="dropdown-item" href="#">Cities</a></li>

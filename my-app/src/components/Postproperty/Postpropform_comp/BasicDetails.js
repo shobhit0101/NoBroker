@@ -1,29 +1,30 @@
 import React from "react";
 import "../postprop.css";
 const BasicDetails = (props) => {
-  const{fdata,handleChange}=props
-  const{purpose,prop_cat}=fdata
+  const { fdata, handleChange } = props
+  const { purpose, prop_cat } = fdata
   return (
     <>
-      <div className="transparent_bg mt-0">
+      <div className="transparent_bg mt-0" style={{ "padding": "0px", "border": "1px solid #FF6F6F", "backgroundColor": "#FF6F6F", "borderRadius": "10px" }}>
         <p
           className="italic_font"
-          style={{ textAlign: "center", margin: "0px" }}
+          style={{ "textAlign": "center", "margin": "0px", "fontSize": "30px", "fontFamily": "monospace" }}
         >
           {" "}
-          <b>Basic Details</b>{" "}
+          Basic Details{" "}
         </p>
       </div>
       <div className="form_element_box">
         <label
           htmlFor="Purpose"
           className="form-label"
-          style={{ margin: "0px", fontSize: "14px" }}
-          
+          style={{ margin: "0px", fontSize: "20px", "fontFamily": "'Barlow', sans-serif" }}
+
         >
-          <b>Purpose (you're looking to...)</b>{" "}
+          Purpose (you're looking to...){" "}
+          <hr style={{ "margin": "0px", "height": "2px", "width": "40vw", "borderWidth": "0", "color": "black", "backgroundColor": "black" }}></hr>
         </label>
-        <div className="form-check">
+        <div className="form-check" style={{ "margin": "0px" }}>
           <input
             className="form-check-input radio_color"
             value="sell"
@@ -31,7 +32,7 @@ const BasicDetails = (props) => {
             type="radio"
             name="purpose"
             id=""
-            checked={purpose==="sell" }
+            checked={purpose === "sell"}
           />
           <label className="form-check-label small_font" htmlFor="">
             Sell
@@ -45,7 +46,7 @@ const BasicDetails = (props) => {
             name="purpose"
             onChange={handleChange}
             id=""
-            checked={purpose==="Rent" }
+            checked={purpose === "Rent"}
           />
           <label className="form-check-label small_font" htmlFor="">
             Rent
@@ -59,7 +60,7 @@ const BasicDetails = (props) => {
             name="purpose"
             onChange={handleChange}
             id=""
-            checked={purpose==="PG" }
+            checked={purpose === "PG"}
           />
           <label className="form-check-label small_font" htmlFor="">
             PG
@@ -70,10 +71,11 @@ const BasicDetails = (props) => {
         <label
           htmlFor="PropertyCategory"
           className="form-label"
-          style={{ margin: "0px", fontSize: "14px" }}
+          style={{ margin: "0px", fontSize: "20px", "fontFamily": "'Barlow', sans-serif" }}
         >
           {" "}
-          <b>Property's Category</b>{" "}
+          Property's Category{" "}
+          <hr style={{ "margin": "0px", "height": "2px", "width": "40vw", "borderWidth": "0", "color": "black", "backgroundColor": "black" }}></hr>
         </label>
         <div className="form-check">
           <input
@@ -83,7 +85,7 @@ const BasicDetails = (props) => {
             name="prop_cat"
             onChange={handleChange}
             id=""
-            checked={prop_cat==="Residential"}
+            checked={prop_cat === "Residential"}
           />
           <label className="form-check-label small_font" htmlFor="">
             Residential
@@ -97,7 +99,7 @@ const BasicDetails = (props) => {
             name="prop_cat"
             onChange={handleChange}
             id=""
-            checked={prop_cat==="Commercial"}
+            checked={prop_cat === "Commercial"}
           />
           <label className="form-check-label small_font" htmlFor="">
             Commercial
@@ -111,7 +113,7 @@ const BasicDetails = (props) => {
             name="prop_cat"
             onChange={handleChange}
             id=""
-            checked={prop_cat==="Apartment"}
+            checked={prop_cat === "Apartment"}
           />
           <label className="form-check-label small_font" htmlFor="">
             Apartment
@@ -125,7 +127,7 @@ const BasicDetails = (props) => {
             name="prop_cat"
             onChange={handleChange}
             id=""
-            checked={prop_cat==="House"}
+            checked={prop_cat === "House"}
           />
           <label className="form-check-label small_font" htmlFor="">
             House
@@ -139,7 +141,7 @@ const BasicDetails = (props) => {
             name="prop_cat"
             onChange={handleChange}
             id=""
-            checked={prop_cat==="Land"}
+            checked={prop_cat === "Land"}
           />
           <label className="form-check-label small_font" htmlFor="">
             Land

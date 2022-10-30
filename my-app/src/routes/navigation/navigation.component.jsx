@@ -19,9 +19,9 @@ const Navigation = () => {
                                 <li>Animation</li>
                             </ul>
                         </li> */}
-                    <li><i class="fa fa-external-link"></i><Link className='navLink'>Post</Link></li>
+                    <li><i class="fa fa-external-link"></i><Link className='navLink' to="/postyourproperty">Post</Link></li>
                     <li><i class="fa fa-id-card"></i><Link className='navLink'>About</Link></li>
-                    <li><i class="fa fa-user-circle"></i><Link to="auth" className='navLink'>Register</Link></li>
+                    <li><i class="fa fa-user-circle"></i><Link className='navLink' to="/auth">Register</Link></li>
                 </ul>
             </nav>
 

@@ -8,6 +8,7 @@ import PostPhoto from './Postpropform_comp/PostPhoto';
 import RoomDetails from './Postpropform_comp/RoomDetails';
 import TellAboutProp from './Postpropform_comp/TellAboutProp';
 import Markonmap from './Postpropform_comp/Markonmap';
+import Navigation from '../../routes/navigation/navigation.component';
 const PostPropertyForm = () => {
     //progress
     const [progress, setProgress] = useState(0)
@@ -102,45 +103,54 @@ const PostPropertyForm = () => {
     }
     return (
         <>
-            <form action="/post" method="post" onSubmit={handleSubmit} encType="multipart/form-data">
-                <div className="form-body">
 
-                    <div className="initial-container">
+            <Navigation></Navigation>
 
-                        <div className="transparent_bg mb-0">
-                            <p className="italic_font" style={{ "textAlign": "center", "margin": "0px", "fontSize": "30px" }}> <b>Begin posting your
-                                property</b> </p>
-                        </div>
-
-                        <div style={{ "height": "3px" }}>
-                            <Progressbar bgcolor="orange" progress={progress} height={3} />
-                        </div>
-                        {pageChanger()}
+            <div className="postform_container">
+                <form action="/post" method="post" onSubmit={handleSubmit} encType="multipart/form-data">
+                    <div className="form-body">
 
 
 
-                        <div className='row justify-content-between' style={{ "textAlign": "center" }}>
-                            <div className="col-4">
+                        <div className="initial-container">
 
-                                <button onClick={handlePrev} className="btn btn-outline-dark"
-                                    style={{ "padding": "5px 10vh", "border": "3px solid black" }} disabled={page === 1 ? 1 : 0}> <b>Previous</b></button>
-                            </div>
-                            <div className="col-4">
 
-                                {page !== 7 && <button onClick={handleNext} className="btn btn-outline-dark"
-                                    style={{ "padding": "5px 10vh", "border": "3px solid black" }}> <b>Next</b></button>}
-                                {page === 7 && <button type="submit" className="btn btn-outline-dark"
-                                    style={{ "padding": "5px 10vh", "border": "3px solid black" }}> <b>Submit</b></button>}
+                            <div className="transparent_bg mb-0 " style={{ "padding": "0px", "border": "1px solid #2F89FC", "backgroundColor": "#2F89FC", "borderRadius": "10px" }}>
+                                <p className="italic_font" style={{ "textAlign": "center", "margin": "0px", "fontSize": "30px", "fontFamily": "monospace" }}>Begin posting your
+                                    property</p>
                             </div>
 
+                            <div style={{ "margin": "3px", "height": "3px" }}>
+                                <Progressbar bgcolor="black" progress={progress} height={3} />
+                            </div>
+                            {pageChanger()}
+
+
+
+                            <div className='row justify-content-between' style={{ "textAlign": "center", "margin": "0px" }}>
+                                <div className="col-4">
+
+                                    <button onClick={handlePrev} className="btn btn-outline-dark"
+                                        style={{ "padding": "5px 4vw", "border": "3px solid #38E54D", "backgroundColor": "#38E54D", "color": "#000000", "fontFamily": "monospace", "fontSize": "18px" }} disabled={page === 1 ? 1 : 0}>Previous</button>
+                                </div>
+                                <div className="col-4">
+
+                                    {page !== 7 && <button onClick={handleNext} className="btn btn-outline-dark"
+                                        style={{ "padding": "5px 4vw", "border": "3px solid #38E54D", "backgroundColor": "#38E54D", "color": "#000000", "fontFamily": "monospace", "fontSize": "18px" }}>Next</button>}
+                                    {page === 7 && <button type="submit" className="btn btn-outline-dark"
+                                        style={{ "padding": "5px 4vw", "border": "3px solid #38E54D", "backgroundColor": "#38E54D", "color": "#000000", "fontFamily": "monospace", "fontSize": "18px" }}>Submit</button>}
+                                </div>
+
+                            </div>
+
+
                         </div>
-
-
                     </div>
-                </div>
 
 
-            </form>
+                </form>
+            </div>
+
         </>
 
     )

@@ -5,7 +5,7 @@
     border: 1px solid white;
     border-radius: 2vh;
     align-self: center;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     padding: 20px;
     justify-content: center;
     align-items: center;
@@ -15,9 +15,6 @@
         -6px -6px 12px #5c5c5a;
     position: absolute;
     top: 68vh;
-
-
-
     left: 10vw;
 }
 
@@ -46,6 +43,9 @@
 }
 
 .searchbar {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     text-align: center;
 
 }
@@ -55,13 +55,16 @@
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 1vh;
+
 }
 
 .location {
+    margin: 10px;
     margin-right: 1vh;
     border: 0px;
+    padding: 0px;
     border-radius: 0px;
-    background-color: #374045;
+    background-color: #3199d2;
     color: #F6F6F6;
 
 }
@@ -73,6 +76,7 @@
 
 .search {
     margin-left: 1vh;
+
     border: 0px;
     border-radius: 0px;
     background-color: #374045;
@@ -96,6 +100,7 @@
 
 .search-text {
     border-radius: 0px;
+    margin-top: 6px;
 }
 
 .categories {
