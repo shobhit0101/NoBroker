@@ -15,22 +15,22 @@ function Footer() {
                 </div>
                 <div class="section-2">
                     <div>
-                        <div class="rowf">
-                            <div class>
-                                <h6 class="title">BUILDING LOCATION</h6>
-                                <p>Motivation can take you far, but it can take you even further if you first find your vision. Your vision will motivate and guide you on</p>
-                                <div class="icon-list footer-address">
-                                    <ul>
+                        <div class="">
+                            <div  >
+                                <h6 class="title" style={{ "textAlign": "center", "marginLeft": "0px" }}>BUILDING LOCATION</h6>
+                                <p style={{ "textAlign": "center" }}>Motivation can take you far, but it can take you even further if you first find your vision. Your vision will motivate and guide you on</p>
+                                <div class="icon-list footer-address foot_con"  >
+                                    <ul >
                                         <li>
-                                            <span class="icon-list-icon">ADDRESS:</span>
-                                            <span class="icon-list-text">Logan Barker, 865 Oak Boulevard, Elk Grove, Vermont 95184</span>
+                                            <span class="icon-list-icon" style={{ "textAlign": "center" }}>ADDRESS:</span>
+                                            <span class="icon-list-text" style={{ "textAlign": "center" }}>Logan Barker, 865 Oak Boulevard, Elk Grove, Vermont 95184</span>
                                         </li>
                                         <li>
-                                            <span class="icon-list-icon">PHONE:</span>
-                                            <span class="icon-list-text">012-123-2345</span>
+                                            <span class="icon-list-icon" style={{ "textAlign": "center" }}>PHONE:</span>
+                                            <span class="icon-list-text" style={{ "textAlign": "center" }}>012-123-2345</span>
                                         </li>
-                                        <li><span class="icon-list-icon">E-MAIL:</span>
-                                            <span class="icon-list-text">email.support@perfectview.com</span>
+                                        <li><span class="icon-list-icon" style={{ "textAlign": "center" }}>E-MAIL:</span>
+                                            <span class="icon-list-text" style={{ "textAlign": "center" }}>email.support@perfectview.com</span>
                                         </li>
                                     </ul>
                                 </div>

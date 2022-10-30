@@ -17,6 +17,11 @@ import Filter from "./components/Filter/Filter";
 import Markonmap from "./components/Postproperty/Postpropform_comp/Markonmap";
 import PropState from "./context/property/PropState";
 import Search from "./components/Search/Search";
+import AboutUs from "./components/aboutus/aboutus";
+
+
+
+
 function App() {
   return (
     <>
@@ -37,6 +42,7 @@ function App() {
             <Route exact path="/Admin_property" element={<Admin_property />} />
             <Route exact path="/Admin_ContactUs" element={<Admin_ContactUs />} />
             <Route exact path="/Auth" element={<Authentication />} />
+            <Route exact path="/aboutus" element={<AboutUs />} />
 
 
           </Routes>

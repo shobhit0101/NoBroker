@@ -37,13 +37,13 @@
 }
 
 .navLink:hover {
-    color: #1a8cea !important;
+    color: #BC6FF1 !important;
 }
 
 
 .logo-link {
     border-radius: 12px;
-    background: #91c7d3;
+    background: #BC6FF1;
     box-shadow: 15px 15px 30px #bebebe,
         -15px -15px 30px #ffffff;
     width: 7vw;
@@ -117,7 +117,7 @@
 } */
 
 .main-menu>li:hover i:not(li.active) {
-    color: #1a8cea;
+    color: #BC6FF1;
 }
 
 /* .main-menu .active {

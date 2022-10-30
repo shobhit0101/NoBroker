@@ -1,5 +1,5 @@
-import React,{useState,useEffect,useContext} from 'react';
-import {useNavigate} from 'react-router-dom';
+import React, { useState, useEffect, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./postprop.css";
 import Progressbar from '../Progress_bar';
 import AreaDetail from './Postpropform_comp/AreaDetail';
@@ -13,43 +13,43 @@ import propertyContext from '../../context/property/propertyContext';
 import Navigation from '../../routes/navigation/navigation.component';
 const PostPropertyForm = () => {
     //navigation
-    const navigate=useNavigate()
+    const navigate = useNavigate()
     //
 
     //progress
     const [progress, setProgress] = useState(0)
     //
     //useContext
-    const context=useContext(propertyContext)
-    const{prop,setProp}=context
+    const context = useContext(propertyContext)
+    const { prop, setProp } = context
     //
 
     //formdata
-    let fdata2={
-        city:"",
-        Apartment_society:'',
-        Locality:'',
-        sublocality:'',
-        houseno:'',
-        property_title:'',
-        abt_property:'',
-        property_age:'',
-        price:'',
-        owner_name:'',
-        phoneno:'',
-        area:'',
-        bedrooms:'',
-        Bathrooms:'',
-        Balconies:'',
-        floorno:'',
-        purpose:'',
-        prop_cat:'',
-        Area_Unit:'',
-        image_file:{},
-        image:{},
-        isimg:0,
-        lat:28.5,
-        lng:76.9
+    let fdata2 = {
+        city: "",
+        Apartment_society: '',
+        Locality: '',
+        sublocality: '',
+        houseno: '',
+        property_title: '',
+        abt_property: '',
+        property_age: '',
+        price: '',
+        owner_name: '',
+        phoneno: '',
+        area: '',
+        bedrooms: '',
+        Bathrooms: '',
+        Balconies: '',
+        floorno: '',
+        purpose: '',
+        prop_cat: '',
+        Area_Unit: '',
+        image_file: {},
+        image: {},
+        isimg: 0,
+        lat: 28.5,
+        lng: 76.9
     }
     //
     const [page, setpage] = useState(1)
@@ -128,7 +128,7 @@ const PostPropertyForm = () => {
                         <div className="initial-container">
 
 
-                            <div className="transparent_bg mb-0 " style={{ "padding": "0px", "border": "1px solid #2F89FC", "backgroundColor": "#2F89FC", "borderRadius": "10px" }}>
+                            <div className="transparent_bg mb-0 " style={{ "padding": "0px", "border": "1px solid #2F89FC", "backgroundColor": "#153462", "borderRadius": "10px", "color": "white" }}>
                                 <p className="italic_font" style={{ "textAlign": "center", "margin": "0px", "fontSize": "30px", "fontFamily": "monospace" }}>Begin posting your
                                     property</p>
                             </div>
@@ -144,14 +144,14 @@ const PostPropertyForm = () => {
                                 <div className="col-4">
 
                                     <button onClick={handlePrev} className="btn btn-outline-dark"
-                                        style={{ "padding": "5px 4vw", "border": "3px solid #38E54D", "backgroundColor": "#38E54D", "color": "#000000", "fontFamily": "monospace", "fontSize": "18px" }} disabled={page === 1 ? 1 : 0}>Previous</button>
+                                        style={{ "padding": "5px 4vw", "border": "3px solid #91C788", "backgroundColor": "#91C788", "color": "#000000", "fontFamily": "monospace", "fontSize": "18px", "fontWeight": "bold" }} disabled={page === 1 ? 1 : 0}>Previous</button>
                                 </div>
                                 <div className="col-4">
 
                                     {page !== 7 && <button onClick={handleNext} className="btn btn-outline-dark"
-                                        style={{ "padding": "5px 4vw", "border": "3px solid #38E54D", "backgroundColor": "#38E54D", "color": "#000000", "fontFamily": "monospace", "fontSize": "18px" }}>Next</button>}
+                                        style={{ "padding": "5px 4vw", "border": "3px solid #91C788", "backgroundColor": "#91C788", "color": "#000000", "fontFamily": "monospace", "fontSize": "18px", "fontWeight": "bold" }}>Next</button>}
                                     {page === 7 && <button type="submit" className="btn btn-outline-dark"
-                                        style={{ "padding": "5px 4vw", "border": "3px solid #38E54D", "backgroundColor": "#38E54D", "color": "#000000", "fontFamily": "monospace", "fontSize": "18px" }}>Submit</button>}
+                                        style={{ "padding": "5px 4vw", "border": "3px solid #91C788", "backgroundColor": "#91C788", "color": "#000000", "fontFamily": "monospace", "fontSize": "18px", "fontWeight": "bold" }}>Submit</button>}
                                 </div>
 
                             </div>

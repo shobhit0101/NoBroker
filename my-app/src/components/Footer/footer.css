@@ -20,6 +20,12 @@ div {
 
 }
 
+.foot_con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .site-footer h3,
 .site-footer h2 {
     font-weight: 400;
@@ -32,9 +38,9 @@ div {
     font-size: 26px;
 }
 
-h3 {
+/* h3 {
     font-size: 1.875rem;
-}
+} */
 
 .site-footer .heading-title {
     margin-bottom: 40px;
@@ -47,7 +53,7 @@ h6 {
     font-family: Montserrat, sans-serif;
     font-weight: 600;
     font-size: 12px;
-    margin-left: 7%
+
 }
 
 .text-center {
@@ -87,10 +93,10 @@ h6 {
     width: 100%;
 }
 
-form {
+/* form {
     display: block;
     margin-top: 0em;
-}
+} */
 
 .form-group {
     margin-bottom: 1rem;

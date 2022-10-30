@@ -6,17 +6,18 @@
 /* form css starts here */
 .postform_container {
     min-height: 100vh;
-    background-color: rgb(255, 255, 255);
+    background-color: #B2B2B2;
 }
 
 .form-body {
 
-    background: #ffffff;
+    background: #B2B2B2;
     /* height: 92vh; */
 
     display: flex;
     align-items: center;
     justify-content: center;
+
 
     /* box-shadow: 20px 20px 60px #bebebe,
         -20px -20px 60px #ffffff; */
@@ -30,16 +31,19 @@
 
 .initial-container {
     /* height: 80vh; */
+
     width: 50vw;
     background-size: 400% 400%;
 
-    padding: 5vh;
-    margin: auto;
+    padding: 4vh;
+    margin-top: 20px;
     color: rgb(0, 0, 0);
     /* border-radius: 21px; */
-    background: #EEF2F5;
-    /* box-shadow: inset 20px 20px 60px #bebebe,
-        inset -20px -20px 60px #ffffff; */
+    background: #EAEAEA;
+    /* border: 2px solid white; */
+    border-radius: 20px;
+    box-shadow: inset 20px 20px 60px #bebebe,
+        inset -20px -20px 60px #ffffff;
 
 }
 
@@ -51,8 +55,8 @@
 
     font-family: 'Barlow', sans-serif;
     font-size: 30px;
-    border: 1px solid #E8F6EF;
-    background-color: #E8F6EF;
+    border: 1px solid #EAEAEA;
+    background-color: #EAEAEA;
     border-radius: 10px;
     color: rgb(0, 0, 0);
 }

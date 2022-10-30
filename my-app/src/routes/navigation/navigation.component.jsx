@@ -20,7 +20,7 @@ const Navigation = () => {
                             </ul>
                         </li> */}
                     <li><i class="fa fa-external-link"></i><Link className='navLink' to="/postyourproperty">Post</Link></li>
-                    <li><i class="fa fa-id-card"></i><Link className='navLink'>About</Link></li>
+                    <li><i class="fa fa-id-card"></i><Link className='navLink' to="/aboutus">About</Link></li>
                     <li><i class="fa fa-user-circle"></i><Link className='navLink' to="/auth">Register</Link></li>
                 </ul>
             </nav>

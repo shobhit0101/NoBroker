@@ -13,10 +13,10 @@ const SearchContainer = () => {
                 </div>
                 <form className="d-flex submit " style={{ margin: "2vh" }} action="/search" method="post">
                     <div className="btn dropdown dropstart location">
-                        <Link className=" dropdown-toggle " href="#" role="button" id="dropdownMenuLink"
+                        <button className=" dropdown-toggle location_button_new" href="#" role="button" id="dropdownMenuLink"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Location
-                        </Link>
+                        </button>
 
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <li><a className="dropdown-item" href="#">Cities</a></li>
