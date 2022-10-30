@@ -4,10 +4,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 /* form css starts here */
 
+.form-body {
+    background: rgb(0, 0, 0);
+    height: 100%;
+    animation: gradient 15s ease infinite;
+}
+
 .initial-container {
     /* height: 80vh; */
     width: 50vw;
-    background: linear-gradient(-45deg, #e6ecc7, #df895e, #af9cf0, #27a7da);
+    background: rgb(255, 255, 255);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     margin: auto;
@@ -15,6 +21,7 @@
     color: rgb(0, 0, 0);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
+
 .form_element_box {
     margin: 2px 0px;
     padding: 5px;
@@ -31,28 +38,33 @@
     border-radius: 2px;
     color: rgb(0, 0, 0);
 }
-.form-control.textbox{
-    width:100%;
+
+.form-control.textbox {
+    width: 100%;
 }
-.form-select.selectbox.textbox{
-    width:100%;
+
+.form-select.selectbox.textbox {
+    width: 100%;
 }
+
 .italic_font {
     font-family: 'Barlow', sans-serif;
-font-family: 'Indie Flower', cursive;
-font-family: 'Josefin Sans', sans-serif;
-font-family: 'Josefin Slab', serif;
-font-family: 'Lexend Peta', sans-serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Square Peg', cursive;
-font-size: 25px;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Josefin Slab', serif;
+    font-family: 'Lexend Peta', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Square Peg', cursive;
+    font-size: 25px;
 }
+
 .small_font {
     font-size: 12px;
 }
+
 .textbox {
     padding: 4px;
-    background: linear-gradient(-45deg, #e4eeb2, #efb79f, #cfc4f2, #aeddef);
+    background: white;
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     color: #000000;
@@ -60,6 +72,7 @@ font-size: 25px;
     width: 49vw;
 
 }
+
 .transparent_bg {
     margin: 2px 0px;
     padding: 5px;
@@ -73,17 +86,16 @@ font-size: 25px;
     border-radius: 2px;
     color: rgb(0, 0, 0);
 }
-.radio_color{
-    background: linear-gradient(-45deg, #e4eeb2, #efb79f, #cfc4f2, #aeddef);
+
+.radio_color {
+    background: white;
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
-.form-body {
-    background: linear-gradient(-45deg, #f1f2eb, #eb8888, #2394d5, #e46fe1);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    
-}
+
+
+
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -97,79 +109,88 @@ font-size: 25px;
         background-position: 0% 50%;
     }
 }
-@media screen and (max-width:480px){
-    .description{
-       text-align: center;
+
+@media screen and (max-width:480px) {
+    .description {
+        text-align: center;
         padding: 30px;
-        font-size: 20px; 
+        font-size: 20px;
         margin: auto;
     }
-    .search_container{
+
+    .search_container {
         display: none;
     }
-    .search_header{
+
+    .search_header {
         height: 40vh;
     }
-    .searchresponsive{
+
+    .searchresponsive {
         display: block;
         width: 100%;
-       padding: 8px;
+        padding: 8px;
     }
-    .search{
+
+    .search {
         margin-right: 5px;
         border: 1px solid #F6F6F6;
         border-radius: 2px;
     }
 }
 
-@media screen and (max-width:800px){
-   .search_container{
-       display: none;
-   }
-   .search_header{
-       height: 40vh;
-   }
-   .searchresponsive{
-       display: block;
-       width: 100%;
-      padding: 8px;
-   }
-   .search{
-       margin-right: 5px;
-       border: 1px solid #F6F6F6;
-       border-radius: 2px;
-   }
+@media screen and (max-width:800px) {
+    .search_container {
+        display: none;
+    }
+
+    .search_header {
+        height: 40vh;
+    }
+
+    .searchresponsive {
+        display: block;
+        width: 100%;
+        padding: 8px;
+    }
+
+    .search {
+        margin-right: 5px;
+        border: 1px solid #F6F6F6;
+        border-radius: 2px;
+    }
 
 }
-.form-container{
-    background-color:#ffffff ;
+
+.form-container {
+    background-color: #ffffff;
     /* border: 1px solid black; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: auto;
     margin-top: 10px;
-    border-radius: 30px  30px ;
+    border-radius: 30px 30px;
     padding: 20px;
     color: rgb(0, 0, 0);
 }
 
-.form-section-container{
+.form-section-container {
     margin: 20px;
     /* border: 1px solid rgb(0, 0, 0); */
     padding: 10px;
     /* box-shadow:5px 5px 5px #969090; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-   
+
 }
 
 .textbox {
     width: 30vw;
     background-color: #ffffff;
     color: #000000;
-   
+
 }
 
 .selectbox {
-    width: 30vw; 
+    width: 30vw;
 }
 
 

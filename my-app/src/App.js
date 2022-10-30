@@ -1,6 +1,5 @@
-import NavBar from "./components/NavBar";
+
 import "./App.css";
-import Home from "./components/Home";
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Outlet } from "react-router-dom";
 import About from "./components/About";
@@ -11,7 +10,8 @@ import Admin_home from "./components/Admin_Portal/Admin_home";
 import Admin_user from "./components/Admin_Portal/Admin_user";
 import Admin_property from "./components/Admin_Portal/Admin_property";
 import Admin_ContactUs from "./components/Admin_Portal/Admin_ContactUs";
-
+import Home from "../src/routes/home/home.component";
+import Authentication from "./routes/authentication/authentication.component"
 
 
 import Filter from "./components/Filter/Filter";
@@ -26,6 +26,7 @@ function App() {
 
 
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/home" element={<Home />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/postyourproperty" element={<PostPropertyForm />} />
           <Route exact path="/login" element={<Login />} />
@@ -34,6 +35,7 @@ function App() {
           <Route exact path="/search" element={<Filter />} />
           <Route exact path="/Admin_property" element={<Admin_property />} />
           <Route exact path="/Admin_ContactUs" element={<Admin_ContactUs />} />
+          <Route exact path="/Auth" element={<Authentication />} />
 
 
         </Routes>

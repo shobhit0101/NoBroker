@@ -4,13 +4,13 @@ import "./navigation.styles.css"
 const Navigation = () => {
     return (
         <Fragment>
-                <nav className="menu" style={{marginLeft: "322px", height: "35px"}}>
-                    <ul className="main-menu">
-                        {/* <div className='logo-link'>
+            <nav className="Navigationmenu">
+                <ul className="main-menu">
+                    {/* <div className='logo-link'>
                             <Link className='navLink'>NoBroker</Link>
                         </div> */}
-                        <li><i className="fa fa-home"></i><Link className='navLink' to="/">Home</Link></li>
-                        {/* <li class="with-submenu">
+                    <li><i className="fa fa-home"></i><Link className='navLink' to="/">Home</Link></li>
+                    {/* <li class="with-submenu">
                             <i class="fa fa-briefcase"></i>Post Property <i class="fa fa-caret-down"></i>
                             <ul class="submenu">
                                 <li>React</li>
@@ -19,12 +19,12 @@ const Navigation = () => {
                                 <li>Animation</li>
                             </ul>
                         </li> */}
-                        <li><i class="fa fa-external-link"></i><Link className='navLink'>Post</Link></li>
-                        <li><i class="fa fa-id-card"></i><Link className='navLink'>About</Link></li>
-                        <li><i class="fa fa-user-circle"></i><Link to="auth" className='navLink'>Register</Link></li>
-                    </ul>
-                </nav>
-                    
+                    <li><i class="fa fa-external-link"></i><Link className='navLink'>Post</Link></li>
+                    <li><i class="fa fa-id-card"></i><Link className='navLink'>About</Link></li>
+                    <li><i class="fa fa-user-circle"></i><Link to="auth" className='navLink'>Register</Link></li>
+                </ul>
+            </nav>
+
             <Outlet />
         </Fragment>
     );

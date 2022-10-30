@@ -6,7 +6,11 @@ import SearchContainer from "../../components/search-container/search-container.
 import BodyCards from "../../components/body-cards/body-cards.component";
 import MailButton from "../../components/mail-button/mail-button.component";
 import Testimonials from "../../components/testimonials/testimonials.component";
-import "./home.styles.css"
+import Navigation from "../navigation/navigation.component";
+import "./home.styles.css";
+// import "../navigation/navigation.component";
+
+
 
 const Home = () => {
 
@@ -64,11 +68,12 @@ const Home = () => {
 
   return (
     <>
+      <Navigation />
       <SearchHeader />
-      <HeroCard />
+      {/* <HeroCard /> */}
       <SearchContainer />
       <div className="home-content">
-        <br /><h3>GET STARTED WITH EXPLORING REAL ESTATE OPTIONS</h3><br /><br />
+        <br /><div className="home_h3"><h3>GET STARTED WITH EXPLORING REAL ESTATE OPTIONS</h3></div><br /><br />
         <div className="cardlist-div">
           <br />
           <CardList categories={categories} />
@@ -79,14 +84,14 @@ const Home = () => {
 
         <BodyCards />
 
-        <p style={{ fontSize: "50px", fontFamily: "'Poppins', sans-serif", fontWeight: "800", color: "#7d9644ad", textAlign: "center" }}>Price is what you pay. <br /><br /><br /> Value is what you get...</p><br /><br /><br /><br />
-        <MailButton /><br /><br /><br /><br />
-        <h1 style={{ "fontFamily": "'Poppins', sans-serif", "fontWeight": "700", "fontSize": "50px" }}>Explore Real Estate in Popular Indian Cities</h1>
+        <p style={{ fontSize: "50px", fontFamily: "'Poppins', sans-serif", fontWeight: "800", color: "#7d9644ad", textAlign: "center", marginTop: "2vh" }}>Price is what you pay. <br /> Value is what you get...</p><br /><br />
+        {/* <MailButton /><br /><br /><br /><br /> */}
+        <h1 style={{ "fontFamily": "'Poppins', sans-serif", "fontWeight": "700", "fontSize": "50px", marginBottom: "10vh" }}>Explore Real Estate in Popular Indian Cities</h1>
         <div className="directory-div">
           <Directory properties={properties} />
         </div>
 
-        
+
 
 
         <Testimonials />

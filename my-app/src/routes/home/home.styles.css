@@ -1,6 +1,12 @@
 .home-content h3 {
-    margin-left: 260px;
-    margin-top: 150px;
+
+    text-align: center;
+    /* margin-top: 150px; */
+}
+
+.home_h3 {
+    margin-top: 10vh;
+
 }
 
 .cardlist-div {
@@ -16,10 +22,7 @@
 
 .directory-dic {
     border-radius: 6px;
-background: #ffffff;
-box-shadow: inset 12px 12px 53px #bfbfbf,
-            inset -12px -12px 53px #ffffff;
+    background: #ffffff;
+    box-shadow: inset 12px 12px 53px #bfbfbf,
+        inset -12px -12px 53px #ffffff;
 }
-
-
-

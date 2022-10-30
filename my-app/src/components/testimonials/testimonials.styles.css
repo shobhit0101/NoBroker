@@ -14,9 +14,10 @@ a:hover {
 }
 
 .outerdiv {
+    /* margin-top: 10vh; */
     width: 100%;
     min-height: 100vh;
-    background: #EDF2F8;
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,9 +82,13 @@ a:hover {
     margin-right: 1rem;
 }
 
-.imgbox img {
+/* .imgbox img {
+  
+} */
+.testimonial_image {
     border-radius: 50%;
-    width: 2rem;
+    width: 6rem;
+    height: 6rem;
     border: 2px solid #cec5c5;
 }
 
@@ -124,6 +129,7 @@ a:hover {
     font-weight: 600;
     line-height: 1.5;
     margin-bottom: 0.8rem;
+
 }
 
 .review.dark h4 {
@@ -136,10 +142,12 @@ a:hover {
     font-weight: 500;
     opacity: 50%;
     line-height: 1.5;
+    margin-top: 5vh;
 }
 
 .review.dark p {
     color: #0e0e0e;
+    margin-top: 5vh;
 }
 
 .attribution {

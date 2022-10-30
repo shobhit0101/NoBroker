@@ -1,6 +1,6 @@
 .search_container {
-    width: 70%;
-    height: 30vh;
+    width: 80vw;
+    height: 20vh;
     background-color: white;
     border: 1px solid white;
     border-radius: 2vh;
@@ -10,12 +10,15 @@
     justify-content: center;
     align-items: center;
     border-radius: 12px;
-    background: linear-gradient(145deg, #cfb9a0, #f6dcbe);
+    background: #c4b9b9;
     box-shadow: 6px 6px 12px #a69480,
-        -6px -6px 12px #ffffe4;
+        -6px -6px 12px #5c5c5a;
     position: absolute;
-    top: 431px;
-    margin-left: 320px;
+    top: 68vh;
+
+
+
+    left: 10vw;
 }
 
 .description {
