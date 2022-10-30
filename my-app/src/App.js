@@ -15,12 +15,15 @@ import Authentication from "./routes/authentication/authentication.component"
 
 import Filter from "./components/Filter/Filter";
 import Markonmap from "./components/Postproperty/Postpropform_comp/Markonmap";
+import PropState from "./context/property/PropState";
+import Search from "./components/Search/Search";
 function App() {
   return (
     <>
+      <PropState>
       <Router>
 
-
+        
         <Routes>
 
 
@@ -30,15 +33,16 @@ function App() {
           <Route exact path="/postyourproperty" element={<PostPropertyForm />} />
           <Route exact path="/Admin_home" element={<Admin_home />} />
           <Route exact path="/Admin_user" element={<Admin_user />} />
-          <Route exact path="/search" element={<Filter />} />
+          <Route exact path="/search" element={<Search />} />
           <Route exact path="/Admin_property" element={<Admin_property />} />
           <Route exact path="/Admin_ContactUs" element={<Admin_ContactUs />} />
           <Route exact path="/Auth" element={<Authentication />} />
 
 
         </Routes>
-
+        <NavBar/>
       </Router>
+      </PropState>
     </>
   );
 }

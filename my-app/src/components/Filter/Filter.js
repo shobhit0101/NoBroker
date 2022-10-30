@@ -1,6 +1,68 @@
-import React from 'react'
+import React, { useContext,useState,useEffect } from 'react'
+import propertyContext from '../../context/property/propertyContext';
 import "./Filter.css";
-const Filter = () => {
+const Filter = (props) => {
+    const{res,setres}=props
+    const [selected, setselected] = useState({
+      location:'0',
+      purpose:'0',
+      prop_cat:'0',
+      min_price:null,
+      max_price:null,
+      min_area:null,
+      max_area:null
+    })
+    const{location,purpose,prop_cat,min_price,max_price,min_area,max_area}=selected
+    //destructuring prop context
+    const context=useContext(propertyContext)
+    const{prop}=context
+    console.log(prop)
+    //
+    const filterop=()=>{
+        // alert("yo")
+        console.log("ui")
+        console.log(selected)
+        let r=prop.filter(e=>{
+        return (e.purpose===purpose || purpose==='0')&&(e.city===location||location==='0')&&
+        (e.prop_cat===prop_cat || prop_cat==='0')&&(e.price>=min_price || min_price===''||min_price===null)&&(e.price<=max_price || max_price===''||max_price===null)&&
+        (e.area>=min_area || min_area==='' || min_area===null)&&(e.area<=max_area || max_area==='' || max_area===null)
+      })
+      console.log("th")
+      console.log(res)
+      setres(r)
+    }
+    useEffect(() => {
+      
+      filterop();
+      // eslint-disable-next-line
+    }, [selected])
+    
+    const handleChange=(e)=>{
+        const name=e.target.name
+        
+        const val=e.target.value
+        console.log(val)
+        setselected({...selected,[name]:val});
+    }
+    const handleChange_num=(e)=>{
+      const name=e.target.name
+        
+      const val=e.target.value
+      console.log(val)
+      setselected({...selected,[name]:(val===''?null:Number(val))});
+    }
+    const handleClear=(e)=>{
+      e.preventDefault();
+      setselected({
+        location:'0',
+        purpose:'0',
+        prop_cat:'0',
+        min_price:'',
+        max_price:'',
+        min_area:'',
+        max_area:''
+      })
+    }
     const handleSubmit=()=>{}
   return (
     <>
@@ -11,12 +73,13 @@ const Filter = () => {
                         <h5>Filter</h5>
                     </div>
                     <div className='align-self-end'>
-                        <button className='btn'><h5>Clear all</h5></button>
+                        <button className='btn' onClick={handleClear}><h5>Clear all</h5></button>
                     </div>
                 </div>
                 <div className="container">
-                    <label htmlFor="Carpet_Area">Location</label>
-                    <select className='location' style={{"width":"100%"}} name="Area_Unit" id="Area_Unit"  size="1">
+                    <label htmlFor="location">Location</label>
+                    <select className='location' style={{"width":"100%"}} name="location" id="location"  size="1" value={location} onChange={handleChange}>
+                        <option value='0'>All</option>
                         <option value="Delhi">Delhi</option>
                         <option value="Lucknow">Lucknow</option>
                         <option value="Ahmedabad">Ahmedabad</option>
@@ -26,7 +89,7 @@ const Filter = () => {
                         <option value="Kolkata">Kolkata</option>
                     </select>
                 </div>
-                <div className="container">
+                <div className="container mt-2">
         <label
           htmlFor="lookingto"
           className="form-label"
@@ -36,57 +99,57 @@ const Filter = () => {
           Looking To:{" "}
         </label>
         <div className="row px-3">
-        <div className="form-check col-3">
+        <div className="form-check col-6">
           <input
             className="form-check-input radio_color"
-            value="All"
+            value="0"
             type="radio"
             name="purpose"
-            // onChange={handleChange}
+            onChange={handleChange}
             id=""
-            // checked={prop_cat==="Land"}
+            checked={purpose===0}
           />
           <label className="form-check-label small_font" htmlFor="">
             All
           </label>
         </div>
-        <div className="form-check col-3">
+        <div className="form-check col-6">
           <input
             className="form-check-input radio_color"
-            value="buy"
-            // onChange={handleChange}
+            value="sell"
+            onChange={handleChange}
             type="radio"
             name="purpose"
             id=""
-            // checked={purpose==="sell" }
+            checked={purpose==="buy" }
           />
           <label className="form-check-label small_font" htmlFor="">
             Buy
           </label>
         </div>
-        <div className="form-check col-3">
+        <div className="form-check col-6">
           <input
             className="form-check-input radio_color"
             value="Rent"
             type="radio"
             name="purpose"
-            // onChange={handleChange}
+            onChange={handleChange}
             id=""
-            // checked={purpose==="Rent" }
+            checked={purpose==="Rent" }
           />
           <label className="form-check-label small_font" htmlFor="">
             Rent
           </label>
         </div>
-        <div className="form-check col-3">
+        <div className="form-check col-6">
           <input
             className="form-check-input radio_color"
             value="PG"
             type="radio"
             name="purpose"
-            // onChange={handleChange}
+            onChange={handleChange}
             id=""
-            // checked={purpose==="PG" }
+            checked={purpose==="PG" }
           />
           <label className="form-check-label small_font" htmlFor="">
             PG
@@ -94,7 +157,7 @@ const Filter = () => {
         </div>
         </div>
       </div>
-      <div className="container">
+      <div className="container mt-2">
         <label
           htmlFor="PropertyCategory"
           className="form-label"
@@ -104,85 +167,85 @@ const Filter = () => {
           <b>Type Of Place</b>{" "}
         </label>
         <div className="row px-3">
-        <div className="form-check col-4">
+        <div className="form-check col-6">
           <input
             className="form-check-input radio_color"
-            value="All"
+            value="0"
             type="radio"
             name="prop_cat"
-            // onChange={handleChange}
+            onChange={handleChange}
             id=""
-            // checked={prop_cat==="Land"}
+            checked={prop_cat===0}
           />
           <label className="form-check-label small_font" htmlFor="">
             All
           </label>
         </div>
-        <div className="form-check col-4">
+        <div className="form-check col-6">
           <input
             className="form-check-input radio_color"
             value="Residential"
             type="radio"
             name="prop_cat"
-            // onChange={handleChange}
+            onChange={handleChange}
             id=""
-            // checked={prop_cat==="Residential"}
+            checked={prop_cat==="Residential"}
           />
           <label className="form-check-label small_font" htmlFor="">
             Residential
           </label>
         </div>
-        <div className="form-check col-4">
+        <div className="form-check col-6">
           <input
             className="form-check-input radio_color"
             value="Commercial"
             type="radio"
             name="prop_cat"
-            // onChange={handleChange}
+            onChange={handleChange}
             id=""
-            // checked={prop_cat==="Commercial"}
+            checked={prop_cat==="Commercial"}
           />
           <label className="form-check-label small_font" htmlFor="">
             Commercial
           </label>
         </div>
-        <div className="form-check col-4">
+        <div className="form-check col-6">
           <input
             className="form-check-input radio_color"
             value="Apartment"
             type="radio"
             name="prop_cat"
-            // onChange={handleChange}
+            onChange={handleChange}
             id=""
-            // checked={prop_cat==="Apartment"}
+            checked={prop_cat==="Apartment"}
           />
           <label className="form-check-label small_font" htmlFor="">
             Apartment
           </label>
         </div>
-        <div className="form-check col-4">
+        <div className="form-check col-6">
           <input
             className="form-check-input radio_color"
             value="House"
             type="radio"
             name="prop_cat"
-            // onChange={handleChange}
+            onChange={handleChange}
             id=""
-            // checked={prop_cat==="House"}
+            checked={prop_cat==="House"}
           />
           <label className="form-check-label small_font" htmlFor="">
             House
           </label>
         </div>
-        <div className="form-check col-4">
+        <div className="form-check col-6">
           <input
             className="form-check-input radio_color"
             value="Land"
             type="radio"
             name="prop_cat"
-            // onChange={handleChange}
+            onChange={handleChange}
             id=""
-            // checked={prop_cat==="Land"}
+            checked={prop_cat==="Land"}
           />
           <label className="form-check-label small_font" htmlFor="">
             Land
@@ -190,30 +253,29 @@ const Filter = () => {
         </div>
       </div>
         </div>
-        <div className="container row">
-        <div className="container col-6">
+        <div className="container mt-2">
             Price Range:
             <div className="d-flex">
                 <div className="mx-0">
-                    <input type="number" name='min' id='min' placeholder='Min'/>    
+                    <input style={{"width":"100%","borderRadius":"50"}} type="number" name='min_price' id='min' placeholder='Min' onChange={handleChange_num} value={min_price}/>    
                 </div>
                 <div className="mx-3">
-                    <input type="number" name='max' id='max' placeholder='Max'/>    
+                    <input style={{"width":"100%"}} type="number" name='max_price' id='max' placeholder='Max' onChange={handleChange_num} value={max_price}/>    
                 </div>   
             </div> 
         </div>
-        <div className="container col-6">
-            Area:
+        <div className="container mt-2">
+            Area(sq.ft):
             <div className="d-flex">
                 <div className="mx-0">
-                    <input type="number" name='min' id='min' placeholder='Min'/>    
+                    <input style={{"width":"100%"}} type="number" name='min_area' id='min' placeholder='Min' onChange={handleChange_num} value={min_area}/>    
                 </div>
                 <div className="mx-3">
-                    <input type="number" name='max' id='max' placeholder='Max'/>    
+                    <input style={{"width":"100%"}} type="number" name='max_area' id='max' placeholder='Max' onChange={handleChange_num} value={max_area}/>    
                 </div>   
             </div> 
         </div>
-        </div>
+        
             </div>
         </form>
     </>
