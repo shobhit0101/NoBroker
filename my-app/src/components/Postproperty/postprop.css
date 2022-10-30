@@ -5,19 +5,21 @@
 
 /* form css starts here */
 .postform_container {
-    height: 92vh;
+    min-height: 100vh;
     background-color: rgb(255, 255, 255);
 }
 
 .form-body {
+
     background: #ffffff;
-    height: 92vh;
-    animation: gradient 15s ease infinite;
+    /* height: 92vh; */
+
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 20px 20px 60px #bebebe,
-        -20px -20px 60px #ffffff;
+
+    /* box-shadow: 20px 20px 60px #bebebe,
+        -20px -20px 60px #ffffff; */
 
 
 }
@@ -44,13 +46,13 @@
 .form_element_box {
     margin: 10px 10px;
     margin-bottom: 14px;
-    padding: 0vw .4vw;
+    padding: 10px 20px;
     box-shadow: rgba(255, 255, 255, 0.05) 0px 0px 0px 1px;
 
     font-family: 'Barlow', sans-serif;
     font-size: 30px;
-    border: 1px solid #FFF9B0;
-    background-color: #FFF9B0;
+    border: 1px solid #E8F6EF;
+    background-color: #E8F6EF;
     border-radius: 10px;
     color: rgb(0, 0, 0);
 }

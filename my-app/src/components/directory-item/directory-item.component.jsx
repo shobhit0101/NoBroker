@@ -10,7 +10,7 @@ const DirectoryItem = ({ property }) => {
                     backgroundImage: `url(${imageUrl})`,
                 }}
             />
-            <div className='body'>
+            <div className='Directory_item_body'>
                 <h2>{title}</h2>
                 <p>Explore Now</p>
             </div>

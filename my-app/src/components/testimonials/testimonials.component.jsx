@@ -3,7 +3,7 @@ import "./testimonials.styles.css"
 const Testimonials = () => {
     return (
         <>
-            <h1 style={{ fontFamily: "'Poppins', sans-serif", fontWeight: "700", fontSize: "50px", textAlign: "center", marginTop: "15vh" }}>Testimonials</h1>
+            <h1 style={{ fontFamily: "'Poppins', sans-serif", fontWeight: "700", fontSize: "50px", textAlign: "center", marginTop: "6vh" }}>Testimonials</h1>
             <div class="outerdiv">
                 <div class="innerdiv">
                     <div class="div1 eachdiv">

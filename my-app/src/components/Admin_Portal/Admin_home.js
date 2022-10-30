@@ -27,7 +27,7 @@ const Admin_home = () => {
             <div className="admin_card_container">
                 <div className="admin_card">
                     <div className="admin_minicard">
-                        <img src={user1} alt="" className="Admin_logo" />
+                        <img src={user1} alt="" className="admin_card_image" />
                     </div>
                     <h3>Users Visited</h3>
                     <div className="admin_minicard2">
@@ -36,7 +36,7 @@ const Admin_home = () => {
                 </div>
                 <div className="admin_card">
                     <div className="admin_minicard">
-                        <img src={property} alt="" className="Admin_logo" />
+                        <img src={property} alt="" className="admin_card_image" />
                     </div>
                     <h3>Property Posted</h3>
                     <div className="admin_minicard2">
@@ -45,7 +45,7 @@ const Admin_home = () => {
                 </div>
                 <div className="admin_card">
                     <div className="admin_minicard">
-                        <img src={user2} alt="" className="Admin_logo" />
+                        <img src={user2} alt="" className="admin_card_image" />
                     </div>
                     <h3>Users Registered</h3>
                     <div className="admin_minicard2">
