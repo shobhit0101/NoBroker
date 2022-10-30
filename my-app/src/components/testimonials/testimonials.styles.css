@@ -14,7 +14,7 @@ a:hover {
 }
 
 .outerdiv {
-    /* margin-top: 10vh; */
+    margin-top: 0px;
     width: 100%;
     min-height: 100vh;
     background: #ffffff;

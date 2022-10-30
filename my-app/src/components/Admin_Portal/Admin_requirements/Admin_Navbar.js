@@ -8,7 +8,7 @@ const Admin_Navbar = () => {
         <>
             <div className="Navbar_container_A">
                 {/* <div className="admin_logo"><img src={logo_new} alt="" className="new_logo" /></div> */}
-                <div className="logo_container"><img src={real_estate_agent} alt="" className="logo_image" /> <p className="admin_logo"> 𝒩𝑜 ℬ𝓇𝑜𝓀𝑒𝓇 </p> </div>
+                <div className="logo_container"><img src={real_estate_agent} alt="" className="logo_image" /> <p className="admin_logo_messed_up"> 𝒩𝑜 ℬ𝓇𝑜𝓀𝑒𝓇 </p> </div>
                 <ul>
                     <li className="Navbar_li">
                         <Link to="/Admin_home" className="Navbar_link"><button className="Navbar_link_button fromleft">Dashboard</button></Link>

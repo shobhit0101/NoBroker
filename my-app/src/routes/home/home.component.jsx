@@ -8,6 +8,8 @@ import MailButton from "../../components/mail-button/mail-button.component";
 import Testimonials from "../../components/testimonials/testimonials.component";
 import Navigation from "../navigation/navigation.component";
 import "./home.styles.css";
+import Footer from "../../components/Footer/footer";
+
 // import "../navigation/navigation.component";
 
 
@@ -73,7 +75,10 @@ const Home = () => {
       {/* <HeroCard /> */}
       <SearchContainer />
       <div className="home-content">
-        <br /><div className="home_h3"><h3>GET STARTED WITH EXPLORING REAL ESTATE OPTIONS</h3></div><br /><br />
+        <br />
+        <br />
+        <br />
+        <br /><div className="home_h3"><h3>GET STARTED WITH EXPLORING REAL ESTATE OPTIONS</h3></div><br /><br /><br />
         <div className="cardlist-div">
           <br />
           <CardList categories={categories} />
@@ -86,7 +91,7 @@ const Home = () => {
 
         <p style={{ fontSize: "50px", fontFamily: "'Poppins', sans-serif", fontWeight: "800", color: "#7d9644ad", textAlign: "center", marginTop: "2vh" }}>Price is what you pay. <br /> Value is what you get...</p><br /><br />
         {/* <MailButton /><br /><br /><br /><br /> */}
-        <h1 style={{ "fontFamily": "'Poppins', sans-serif", "fontWeight": "700", "fontSize": "50px", marginBottom: "10vh" }}>Explore Real Estate in Popular Indian Cities</h1>
+        <h1 style={{ "fontFamily": "'Poppins', sans-serif", "fontWeight": "700", "fontSize": "50px", marginBottom: "6vh", textAlign: "center" }}>Explore Real Estate in Popular Indian Cities</h1>
         <div className="directory-div">
           <Directory properties={properties} />
         </div>
@@ -95,9 +100,10 @@ const Home = () => {
 
 
         <Testimonials />
-        <br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br />
 
       </div>
+      <Footer></Footer>
     </>
   )
 }

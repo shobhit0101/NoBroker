@@ -2,10 +2,9 @@
 import "./App.css";
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Outlet } from "react-router-dom";
-import About from "./components/About";
-import Footer from "./components/Footer";
+
+
 import PostPropertyForm from "./components/Postproperty/PostPropertyForm";
-import Login from "./components/Login.js";
 import Admin_home from "./components/Admin_Portal/Admin_home";
 import Admin_user from "./components/Admin_Portal/Admin_user";
 import Admin_property from "./components/Admin_Portal/Admin_property";
@@ -27,9 +26,8 @@ function App() {
 
           <Route exact path="/" element={<Home />} />
           <Route exact path="/home" element={<Home />} />
-          <Route exact path="/about" element={<About />} />
+
           <Route exact path="/postyourproperty" element={<PostPropertyForm />} />
-          <Route exact path="/login" element={<Login />} />
           <Route exact path="/Admin_home" element={<Admin_home />} />
           <Route exact path="/Admin_user" element={<Admin_user />} />
           <Route exact path="/search" element={<Filter />} />

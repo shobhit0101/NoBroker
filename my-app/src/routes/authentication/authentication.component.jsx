@@ -10,12 +10,15 @@ const Authentication = () => {
     <>
 
       <Navigation></Navigation>
+      <br />
+      <br />
       <Authentication_container>
         <AuthenticationContainer>
           <SignInForm />
           <SignUpForm />
         </AuthenticationContainer>
       </Authentication_container>
+
 
 
 

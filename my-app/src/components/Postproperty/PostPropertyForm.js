@@ -103,10 +103,10 @@ const PostPropertyForm = () => {
     }
     return (
         <>
-
-            <Navigation></Navigation>
-
             <div className="postform_container">
+                <Navigation></Navigation>
+
+
                 <form action="/post" method="post" onSubmit={handleSubmit} encType="multipart/form-data">
                     <div className="form-body">
 

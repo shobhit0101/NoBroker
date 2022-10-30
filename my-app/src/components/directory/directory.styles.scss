@@ -1,11 +1,17 @@
 .directory-container {
-  width: 100%;
+  width: 80%;
+  height: 30%;
+  margin-left: 10%;
+  margin-right: 10%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+
+
+
   padding: 4vw;
   background: #ffffff;
-  box-shadow: 10px 10px 25px #919191,
-    -10px -10px 25px #666060;
+  // box-shadow: 10px 10px 25px #919191,
+  //   -10px -10px 25px #666060;
 }

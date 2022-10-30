@@ -1,18 +1,19 @@
 .directory-item-container {
-    width: 25vw;
+    width: 20vw;
     height: 30vh;
     flex: 1 1 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
-    margin: 0 7.5px 15px;
+    border: 1px solid rgb(255, 255, 255);
+    margin: 30px;
+    // margin: 0 7.5px 15px;
     overflow: hidden;
-    border-radius: 6px;
-    background: #ffffff;
+    border-radius: 10px;
+    background: #807e7e;
     box-shadow: 25px 25px 50px #919191,
         -25px -25px 50px #ffffff;
-    margin: 20px;
+    // margin: 20px;
 
 
     &:hover {
@@ -45,28 +46,37 @@
         height: 100%;
         background-size: cover;
         background-position: center;
+        border-radius: 10px;
+        // opacity: 0.9;
     }
 
-    .body {
-        height: 90px;
+    .Directory_item_body {
+        height: 60px;
         padding: 0 25px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border: 1px solid black;
-        background-color: white;
-        opacity: 0.7;
+        // border: 1px solid black;
+        // background-color: white;
+        // opacity: 0.2;
+        border-radius: 20px;
+        // background: #e0e0e0;
+        // background-color: transparent;
+        box-shadow: 10px 10px 30px #232121,
+            -10px -10px 30px #413f3f;
         position: absolute;
 
         h2 {
             font-weight: bold;
-            margin: 0 6px 0;
-            font-size: 22px;
-            color: #4a4a4a;
+            margin-top: 16px;
+            font-size: 18px;
+            color: #19181a;
+
         }
 
         p {
+            // margin: auto;
             font-weight: lighter;
             font-size: 16px;
         }

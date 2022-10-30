@@ -63,7 +63,7 @@
     transform-origin: 0% 50%;
 }
 
-.admin_logo {
+.admin_logo_messed_up {
     color: #2FA4FF;
     text-align: center;
     font-size: 30px;
@@ -81,6 +81,7 @@
 
 .logo_image {
     height: 50px;
+    width: 80px;
     margin-right: 10px;
 }
 
@@ -90,6 +91,7 @@
     width: 4vw;
 
 }
+
 
 
 
@@ -119,6 +121,13 @@
 
 .Admin_portal_container {
     position: relative;
+}
+
+.admin_card_image {
+    /* font-size: 20px; */
+    height: 80px;
+    width: 80px;
+
 }
 
 .Admin_portal_container h2 {
@@ -217,6 +226,7 @@
     /* border-top-left-radius: 10px; */
     /* border-top-right-radius: 10px; */
     margin-bottom: 5px;
+    /* font-size: 20px; */
 }
 
 
@@ -329,7 +339,7 @@
 
 
 .Admin_portal_text {
-    font-size: 10vh;
+    font-size: 80px;
     font-family: monospace;
 }
 
