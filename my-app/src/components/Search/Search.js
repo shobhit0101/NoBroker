@@ -3,13 +3,15 @@ import Filter from '../Filter/Filter';
 import Map from './search_components/Map/Map';
 import Results from './search_components/Results/Results';
 import './Search.css';
+import Navigation from '../../routes/navigation/navigation.component';
 const Search = () => {
   const [res, setres] = useState([])
   const [curdata, setcurdata] = useState(null)
   const [coords, setcoords] = useState(['54','36'])
   return (
     <>
-    <div className="" >
+    <Navigation bgcolor="black"/>
+    <div className="mt-4" >
     <div className="row mainn">
     <div className="col-3" style={{"height":"100%"}}>
       <Filter res={res} setres={setres}/>

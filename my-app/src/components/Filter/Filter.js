@@ -280,7 +280,6 @@ const Filter = (props) => {
         
             </div>
         </form>
-        <Navigation/>
     </>
   )
 }
