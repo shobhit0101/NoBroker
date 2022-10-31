@@ -8,7 +8,6 @@ import L from 'leaflet';
 import LocationCard from './LocationCard/LocationCard ';
 let DefaultIcon = L.icon({
     iconUrl: icon,
-    shadowUrl: iconShadow,
     iconSize: new L.Point(25, 35)
 });
 
@@ -34,13 +33,13 @@ const Map = (props) => {
   return (
     
     <>
-  <MapContainer center={[lat,lng]} style={{ height: '100%', width: '100%' }} zoom={13} scrollWheelZoom={true}>
+  <MapContainer center={[lat,lng]} style={{ "height": '100vh', "width": '100%' }} zoom={13} scrollWheelZoom={false}>
     <TileLayer
       
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
     {data!==null&&<Marker position={[lat,lng]}>
-      <div className="container" style={{"width":"30px"}}>
+      <div className="" style={{"width":"30px"}}>
       <Popup >
         
       
