@@ -24,9 +24,9 @@ function AboutUs() {
         <div>
             <Navigation />
 
-            <div class="header_container">
+            <div class="header-container">
                 <img src={building5} style={{ width: '100%', height: '400px' }} />
-                <div class="text">
+                <div class='text'>
                     <div class="au_text">About Us</div>
                 </div>
             </div>

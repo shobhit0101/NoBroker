@@ -10,7 +10,7 @@ function Group_Mem(props) {
                         <img class="img-fluid" style={{ "borderRadius": "50%" }} src={props.img} alt="" />
                     </div>
                     <div class="content-team">
-                        <h3 class="name" style={{ "marginTop": "40px", "textAlign": "center" }}>{props.name}</h3>
+                        <h3 class="person-name" style={{ "marginTop": "40px", "textAlign": "center" }}>{props.name}</h3>
                         <span class="job" style={{ "textAlign": "center" }}> Indian Institute of Information Technology Sricity</span>
                     </div>
                 </div>
