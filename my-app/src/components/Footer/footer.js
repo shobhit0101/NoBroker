@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import '../Footer/footer.css'
 // import 'font-awesome/css/font-awesome.min.css'
 
@@ -32,6 +33,10 @@ function Footer() {
                                         <li><span class="icon-list-icon" style={{ "textAlign": "center" }}>E-MAIL:</span>
                                             <span class="icon-list-text" style={{ "textAlign": "center" }}>email.support@perfectview.com</span>
                                         </li>
+                                        <li><Link to="/contact" class="icon-list-icon" style={{ "textAlign": "center", fontSize: "20px", textDecoration: "none", marginLeft: "16vw", fontWeight: "bolder" }}>Contact Us</Link>
+                                            
+                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </div>

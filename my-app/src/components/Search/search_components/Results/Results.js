@@ -22,7 +22,7 @@ const Results = (props) => {
   }
   return (
     <>
-      <div className="container">    
+      <div className="container bg-light">    
      <form action="/post">
           <div className="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
             <div className="input-group">
@@ -36,7 +36,7 @@ const Results = (props) => {
       </form>
       </div> 
        
-      {curres.length===0?<div className="container px-3">Sorry, No Matches avilable</div>:curres.map((e)=>{return(<div className="container">
+      {curres.length===0?<div className="container px-3" style={{"backgroundColor":"white"}}>Sorry, No Matches avilable</div>:curres.map((e)=>{return(<div className="container" style={{"backgroundColor":"white"}}>
         <Card data={e} coords={coords} setcoords={setcoords} curdata={data} setcurdata={setdata}/>
       </div>)})} 
       {/* <div className="container">
