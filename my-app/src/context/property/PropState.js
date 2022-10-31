@@ -14,8 +14,8 @@ const PropState = (props) => {
       'city': "Delhi",
       'floorno': "2",
       'houseno': "123",
-      'image': "blob:http://localhost:3000/123bafc9-0c1d-4a27-8d9d-1a974a23e86a",
-      'image_file': new File(["http://localhost:3000/123bafc9-0c1d-4a27-8d9d-1a974a23e86a"], {
+      'image': "https://source.unsplash.com/360x360/?realestate",
+      'image_file': new File(["https://source.unsplash.com/360x360/?realestate"], {
         lastModified: 1667150765922,
         lastModifiedDate: 'Sun Oct 30 2022 22:56:05 GMT+0530 (India Standard Time)',
         name: "bg2.jpg",
@@ -47,8 +47,8 @@ const PropState = (props) => {
       'city': "Mumbai",
       'floorno': "2",
       'houseno': "123",
-      'image': "blob:http://localhost:3000/ffed1aed-f6a3-4000-b531-0c966ef73e40",
-      'image_file': new File(["http://localhost:3000/ffed1aed-f6a3-4000-b531-0c966ef73e40"], {
+      'image': "https://source.unsplash.com/360x360/?building",
+      'image_file': new File(["https://source.unsplash.com/360x360/?building"], {
         lastModified: 1667150765931,
         lastModifiedDate: 'Sun Oct 30 2022 22:56:05 GMT+0530 (India Standard Time)',
         name: "bg5.webp",
@@ -80,8 +80,8 @@ const PropState = (props) => {
       'city': "Kolkata",
       'floorno': "3",
       'houseno': "123",
-      'image': "blob:http://localhost:3000/5bd4c367-93f6-4e2d-ae42-4ec22a779cb0",
-      'image_file': new File(["http://localhost:3000/5bd4c367-93f6-4e2d-ae42-4ec22a779cb0"], {
+      'image': "https://source.unsplash.com/360x360/?commercial",
+      'image_file': new File(["https://source.unsplash.com/360x360/?comercial"], {
         lastModified: 1667160388638,
         lastModifiedDate: 'Mon Oct 31 2022 01:36:28 GMT+0530 (India Standard Time)',
         name: "bg9.jpg",
@@ -113,8 +113,8 @@ const PropState = (props) => {
       'city': "Kolkata",
       'floorno': "3",
       'houseno': "123",
-      'image': "blob:http://localhost:3000/5bd4c367-93f6-4e2d-ae42-4ec22a779cb0",
-      'image_file': new File(["http://localhost:3000/5bd4c367-93f6-4e2d-ae42-4ec22a779cb0"], {
+      'image': "https://source.unsplash.com/360x360/?apartment",
+      'image_file': new File(["https://source.unsplash.com/360x360/?apartment"], {
         lastModified: 1667160388638,
         lastModifiedDate: 'Mon Oct 31 2022 01:36:28 GMT+0530 (India Standard Time)',
         name: "bg9.jpg",
@@ -146,8 +146,8 @@ const PropState = (props) => {
       'city': "Lucknow",
       'floorno': "3",
       'houseno': "123",
-      'image': "blob:http://localhost:3000/cbfc604b-5df0-46d6-beca-4fbfc14aaa62",
-      'image_file': new File(["http://localhost:3000/cbfc604b-5df0-46d6-beca-4fbfc14aaa62"], {
+      'image': "https://source.unsplash.com/360x360/?residential",
+      'image_file': new File(["https://source.unsplash.com/360x360/?residential"], {
         lastModified: 1667150765954,
         lastModifiedDate: 'Sun Oct 30 2022 22:56:05 GMT+0530 (India Standard Time)',
         name: "bodycard2.jpg",
@@ -179,8 +179,8 @@ const PropState = (props) => {
       'city': "Kanpur",
       'floorno': "3",
       'houseno': "123",
-      'image': "blob:http://localhost:3000/4cef1bbf-2aa3-48d9-91ad-66a05bc1e918",
-      'image_file': new File(["http://localhost:3000/4cef1bbf-2aa3-48d9-91ad-66a05bc1e918"], {
+      'image':"https://source.unsplash.com/360x360/?house",
+      'image_file': new File(["https://source.unsplash.com/360x360/?house"], {
         lastModified: 1667150766031,
         lastModifiedDate: "Sun Oct 30 2022 22:56:06 GMT+0530 (India Standard Time)",
         name: "mainImg.jpg",
@@ -212,8 +212,8 @@ const PropState = (props) => {
       'city': "Chennai",
       'floorno': "3",
       'houseno': "123",
-      'image': "blob:http://localhost:3000/b722f9aa-a51c-47ee-b6df-9e73f3799208",
-      'image_file': new File(["http://localhost:3000/b722f9aa-a51c-47ee-b6df-9e73f3799208"], {
+      'image': "https://source.unsplash.com/360x360/?bighouse",
+      'image_file': new File(["https://source.unsplash.com/360x360/?bighouse"], {
         lastModified: 1667150766015,
         lastModifiedDate: "Sun Oct 30 2022 22:56:06 GMT+0530 (India Standard Time)",
         name: "i2.jpg",
@@ -245,8 +245,8 @@ const PropState = (props) => {
       'city': "Pune",
       'floorno': "3",
       'houseno': "123",
-      'image': "blob:http://localhost:3000/18121dcb-618e-4659-a275-5d7100631b16",
-      'image_file': new File(["http://localhost:3000/18121dcb-618e-4659-a275-5d7100631b16"], {
+      'image': "https://source.unsplash.com/360x360/?land",
+      'image_file': new File(["https://source.unsplash.com/360x360/?land"], {
         lastModified
           :
           1667150766044,
@@ -272,7 +272,7 @@ const PropState = (props) => {
       'owner_name': "Bhagwan Das",
       'phoneno': "1556879",
       'price': "12352355",
-      'prop_cat': "LAnd",
+      'prop_cat': "Land",
       'property_age': "22",
       'property_title': "Pune Property",
       'purpose': "sell",
