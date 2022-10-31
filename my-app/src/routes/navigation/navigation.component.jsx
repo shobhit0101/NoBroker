@@ -6,16 +6,16 @@ const Navigation = (props) => {
     let color='white'
     if(bgcolor===null){
         bgcolor='white'
-        color='black'
+        color='blue'
     }
     return (
         <Fragment>
             <nav className="Navigationmenu"  >
-                <ul className="main-menu" style={{"backgroundColor":`${bgcolor}`,"color":`${color}`}}>
+                <ul className="main-menu" style={{"backgroundColor":`${bgcolor}`}}>
                     {/* <div className='logo-link'>
                             <Link className='navLink'>NoBroker</Link>
                         </div> */}
-                    <li style={{"color":`${color}`}}><i style={{"color":"white"}} className="fa fa-home"></i><Link className='navLink'  to="/">Home</Link></li>
+                    <li style={{"color":color}}><i style={{"color":"white"}} className="fa fa-home"></i><Link className='navLink'  to="/">Home</Link></li>
                     {/* <li class="with-submenu">
                             <i class="fa fa-briefcase"></i>Post Property <i class="fa fa-caret-down"></i>
                             <ul class="submenu">
