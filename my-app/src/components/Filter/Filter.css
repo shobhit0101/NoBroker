@@ -1,14 +1,13 @@
-.location {
+.location2 {
     padding: 4px;
     background: whitesmoke;
     background-size: 400% 400%;
-    color: #000000;
     font-size: 15px;
     width: 49vw;
     border-color: bisque;
     border-radius: 100;
     
 }
-.small_font{
+.notsosmall_font{
     font-size: 12px;
 }

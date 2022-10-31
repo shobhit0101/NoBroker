@@ -80,7 +80,7 @@ const Filter = (props) => {
                 </div>
                 <div className="container">
                     <label htmlFor="location">Location</label>
-                    <select className='location' style={{"width":"100%"}} name="location" id="location"  size="1" value={location} onChange={handleChange}>
+                    <select className='location2' style={{"width":"100%"}} name="location" id="location"  size="1" value={location} onChange={handleChange}>
                         <option value='0'>All</option>
                         <option value="Delhi">Delhi</option>
                         <option value="Lucknow">Lucknow</option>
@@ -111,7 +111,7 @@ const Filter = (props) => {
             id=""
             checked={purpose===0}
           />
-          <label className="form-check-label small_font" htmlFor="">
+          <label className="form-check-label notsosmall_font" htmlFor="">
             All
           </label>
         </div>
@@ -125,7 +125,7 @@ const Filter = (props) => {
             id=""
             checked={purpose==="buy" }
           />
-          <label className="form-check-label small_font" htmlFor="">
+          <label className="form-check-label notsosmall_font" htmlFor="">
             Buy
           </label>
         </div>
@@ -139,7 +139,7 @@ const Filter = (props) => {
             id=""
             checked={purpose==="Rent" }
           />
-          <label className="form-check-label small_font" htmlFor="">
+          <label className="form-check-label notsosmall_font" htmlFor="">
             Rent
           </label>
         </div>
@@ -153,7 +153,7 @@ const Filter = (props) => {
             id=""
             checked={purpose==="PG" }
           />
-          <label className="form-check-label small_font" htmlFor="">
+          <label className="form-check-label notsosmall_font" htmlFor="">
             PG
           </label>
         </div>
@@ -179,7 +179,7 @@ const Filter = (props) => {
             id=""
             checked={prop_cat===0}
           />
-          <label className="form-check-label small_font" htmlFor="">
+          <label className="form-check-label notsosmall_font" htmlFor="">
             All
           </label>
         </div>
@@ -193,7 +193,7 @@ const Filter = (props) => {
             id=""
             checked={prop_cat==="Residential"}
           />
-          <label className="form-check-label small_font" htmlFor="">
+          <label className="form-check-label notsosmall_font" htmlFor="">
             Residential
           </label>
         </div>
@@ -207,7 +207,7 @@ const Filter = (props) => {
             id=""
             checked={prop_cat==="Commercial"}
           />
-          <label className="form-check-label small_font" htmlFor="">
+          <label className="form-check-label notsosmall_font" htmlFor="">
             Commercial
           </label>
         </div>
@@ -221,7 +221,7 @@ const Filter = (props) => {
             id=""
             checked={prop_cat==="Apartment"}
           />
-          <label className="form-check-label small_font" htmlFor="">
+          <label className="form-check-label notsosmall_font" htmlFor="">
             Apartment
           </label>
         </div>
@@ -235,7 +235,7 @@ const Filter = (props) => {
             id=""
             checked={prop_cat==="House"}
           />
-          <label className="form-check-label small_font" htmlFor="">
+          <label className="form-check-label notsosmall_font" htmlFor="">
             House
           </label>
         </div>
@@ -249,7 +249,7 @@ const Filter = (props) => {
             id=""
             checked={prop_cat==="Land"}
           />
-          <label className="form-check-label small_font" htmlFor="">
+          <label className="form-check-label notsosmall_font" htmlFor="">
             Land
           </label>
         </div>
