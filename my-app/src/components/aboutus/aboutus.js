@@ -26,8 +26,11 @@ function AboutUs() {
 
             <div class="header-container">
                 <img src={building5} style={{ width: '100%', height: '400px' }} />
+                <br />
+                <br />
+                <br /><br />
                 <div class='text'>
-                    <div class="au_text">About Us</div>
+                    <div class="au_text">  <p style={{ fontSize: '60px', }}>About Us</p></div>
                 </div>
             </div>
 

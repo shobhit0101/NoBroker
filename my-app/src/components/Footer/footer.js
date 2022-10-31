@@ -33,10 +33,11 @@ function Footer() {
                                         <li><span class="icon-list-icon" style={{ "textAlign": "center" }}>E-MAIL:</span>
                                             <span class="icon-list-text" style={{ "textAlign": "center" }}>email.support@perfectview.com</span>
                                         </li>
-                                        <li><Link to="/contact" class="icon-list-icon" style={{ "textAlign": "center", fontSize: "20px", textDecoration: "none", marginLeft: "16vw", fontWeight: "bolder" }}>Contact Us</Link>
-                                            
+                                        <br />
+                                        <li><Link to="/contact" class="icon-list-icon" style={{ "textAlign": "center", fontSize: "20px", textDecoration: "none", marginLeft: "12vw", fontWeight: "" }}>Contact Us</Link>
+
                                         </li>
-                                        
+
                                     </ul>
                                 </div>
                             </div>
@@ -46,7 +47,7 @@ function Footer() {
                                 <div class="rowf">
                                     <div class="col-sm-12">
                                         <div class="copyright">
-                                            <p>Copyright © 2022 <a href="#">Perfect View</a>. All Rights Reserved.</p>
+                                            <p>Copyright © 2022 <a href="#">No Broker</a>. All Rights Reserved.</p>
                                         </div>
                                     </div>
                                     <div class="col-sm-12">
