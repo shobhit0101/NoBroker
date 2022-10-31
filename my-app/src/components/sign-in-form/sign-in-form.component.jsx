@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import FormInput from '../form-input/form-input.component';
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
@@ -9,6 +8,7 @@ import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 // } from '../../utils/firebase/firebase.utils';
 
 import { SignInContainer, ButtonsContainer } from './sign-in-form.styles';
+import { useNavigate } from 'react-router-dom';
 
 const defaultFormFields = {
   email: '',
@@ -16,6 +16,8 @@ const defaultFormFields = {
 };
 
 const SignInForm = () => {
+  //navigation
+  const navigate = useNavigate()
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
@@ -37,6 +39,7 @@ const SignInForm = () => {
     } catch (error) {
       console.log('user sign in failed', error);
     }
+    navigate('/home')
   };
 
   const handleChange = (event) => {
@@ -72,9 +75,9 @@ const SignInForm = () => {
           <Button
             buttonType={BUTTON_TYPE_CLASSES.google}
             type='button'
-            // onClick={signInWithGoogle}
+          // onClick={signInWithGoogle}
           >
-           With Google
+            With Google
           </Button>
         </ButtonsContainer>
       </form>
