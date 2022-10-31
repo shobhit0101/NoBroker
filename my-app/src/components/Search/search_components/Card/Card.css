@@ -17,10 +17,6 @@
     font-size: 20px;
     color: gray;
 }
-.property-details {
-    /* display: flex; */
-    /* flex-direction: column; */
-}
 
 .property-name {
     font-size: 1rem;
@@ -39,6 +35,10 @@
      /* margin-left: 3vw;  */
     margin-top: 0.5vh; 
     text-align: center;
-    color: blue;
+    color: black;
 
+}
+.mine{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
 }

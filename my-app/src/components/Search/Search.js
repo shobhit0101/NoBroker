@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Filter from '../Filter/Filter';
+import Filter from './search_components/Filter/Filter';
 import Map from './search_components/Map/Map';
 import Results from './search_components/Results/Results';
 import './Search.css';

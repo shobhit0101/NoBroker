@@ -1,6 +1,6 @@
 import React, { useContext,useState,useEffect } from 'react'
-import propertyContext from '../../context/property/propertyContext';
-import Navigation from '../../routes/navigation/navigation.component';
+import propertyContext from '../../../../context/property/propertyContext';
+import Navigation from '../../../../routes/navigation/navigation.component';
 import "./Filter.css";
 const Filter = (props) => {
     const{res,setres}=props
@@ -70,12 +70,12 @@ const Filter = (props) => {
 
         <form action="/post" method="post" onSubmit={handleSubmit} encType="multipart/form-data">
             <div className="container">
-                <div className="container d-flex justify-content-between">
+                <div className="container d-flex justify-content-between mb-3 pt-2">
                     <div className='pt-2'>
                         <h5>Filter</h5>
                     </div>
-                    <div className='align-self-end'>
-                        <button className='btn' onClick={handleClear}><h5>Clear all</h5></button>
+                    <div className='align-self-end' style={{"marginTop":"-7px"}}>
+                        <button className='btn' onClick={handleClear}>Clear all</button>
                     </div>
                 </div>
                 <div className="container">
@@ -163,10 +163,10 @@ const Filter = (props) => {
         <label
           htmlFor="PropertyCategory"
           className="form-label"
-          style={{ margin: "0px", fontSize: "14px" }}
+          style={{ margin: "0px", "fontSize": "14px" }}
         >
           {" "}
-          <b>Type Of Place</b>{" "}
+          Type Of Place{" "}
         </label>
         <div className="row px-3">
         <div className="form-check col-6">
@@ -255,7 +255,7 @@ const Filter = (props) => {
         </div>
       </div>
         </div>
-        <div className="container mt-2">
+        <div className="container mt-2" style={{"fontSize":"14px"}}>
             Price Range:
             <div className="d-flex">
                 <div className="mx-0">
@@ -266,7 +266,7 @@ const Filter = (props) => {
                 </div>   
             </div> 
         </div>
-        <div className="container mt-2">
+        <div className="container mt-2" style={{"fontSize":"14px"}}>
             Area(sq.ft):
             <div className="d-flex">
                 <div className="mx-0">

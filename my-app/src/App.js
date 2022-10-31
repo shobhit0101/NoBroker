@@ -11,9 +11,6 @@ import Admin_property from "./components/Admin_Portal/Admin_property";
 import Admin_ContactUs from "./components/Admin_Portal/Admin_ContactUs";
 import Home from "../src/routes/home/home.component";
 import Authentication from "./routes/authentication/authentication.component"
-
-
-import Filter from "./components/Filter/Filter";
 import Markonmap from "./components/Postproperty/Postpropform_comp/Markonmap";
 import PropState from "./context/property/PropState";
 import Search from "./components/Search/Search";
