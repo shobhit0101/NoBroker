@@ -12,6 +12,10 @@ const Results = (props) => {
     })
     setcurres(r)
   }
+  useEffect(() => {
+    filterop()
+    // eslint-disable-next-line 
+  }, [res])
   
   const handleClick=(e)=>{
     e.preventDefault()

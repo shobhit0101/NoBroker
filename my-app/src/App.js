@@ -16,6 +16,7 @@ import PropState from "./context/property/PropState";
 import Search from "./components/Search/Search";
 import AboutUs from "./components/aboutus/aboutus";
 import Contact from "./components/contact/contact";
+import Chat from "./components/Chat/Chat";
 
 
 
@@ -42,6 +43,7 @@ function App() {
             <Route exact path="/Auth" element={<Authentication />} />
             <Route exact path="/aboutus" element={<AboutUs />} />
             <Route exact path="/contact" element={<Contact />} />
+            <Route exact path="/chat" element={<Chat/>} />
 
 
           </Routes>
