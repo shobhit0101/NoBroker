@@ -2,10 +2,11 @@ import { useState } from 'react';
 import FormInput from '../form-input/form-input.component';
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
-// import {
-//   signInAuthUserWithEmailAndPassword,
-//   signInWithGooglePopup,
-// } from '../../utils/firebase/firebase.utils';
+import {
+  signInAuthUserWithEmailAndPassword,
+  signInWithGooglePopup,
+} from '../../utils/firebase/firebase.utils';
+
 
 import { SignInContainer, ButtonsContainer } from './sign-in-form.styles';
 import { useNavigate } from 'react-router-dom';
@@ -17,7 +18,7 @@ const defaultFormFields = {
 
 const SignInForm = () => {
   //navigation
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
@@ -25,21 +26,27 @@ const SignInForm = () => {
     setFormFields(defaultFormFields);
   };
 
-  // const signInWithGoogle = async () => {
-  //   await signInWithGooglePopup();
-  // };
+  const signInWithGoogle = async () => {
+    await signInWithGooglePopup();
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      // await signInAuthUserWithEmailAndPassword(email, password);
+      await signInAuthUserWithEmailAndPassword(email, password);
       console.log(formFields);
       resetFormFields();
     } catch (error) {
+      if (error.code === 'auth/user-not-found') {
+        alert('User not found, check your username and try again...')
+      }
+      if (error.code === 'auth/wrong-password') {
+        alert('Wrong password, check your password and try again...')
+      }
       console.log('user sign in failed', error);
     }
-    navigate('/home')
+    // navigate('/home')
   };
 
   const handleChange = (event) => {
@@ -75,7 +82,7 @@ const SignInForm = () => {
           <Button
             buttonType={BUTTON_TYPE_CLASSES.google}
             type='button'
-          // onClick={signInWithGoogle}
+          onClick={signInWithGoogle}
           >
             With Google
           </Button>

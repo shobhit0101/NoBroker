@@ -3,21 +3,16 @@ import bgimg4 from "../contact/img/bgimg4.jpg";
 import phone from "../contact/img/phone.png";
 import address from "../contact/img/address.png";
 import email from "../contact/img/email.png";
-import background from "../../assets/bg5.webp"
-import Navigation from "../../routes/navigation/navigation.component";
-import Footer from "../Footer/footer";
+import "./contact.css"
 
 
 const Contact = () => {
     return (
     <>
       {/* here navbar comes and the below image will touch it */}
-      <Navigation />
-
         <div classNmae="contact_page_wrap">
             <div className="bg_section">
-               {/* <img src={bgimg4} className="bg_img" alt="#" /> */}
-               <img style={{width: "100%"}} src={background} alt="#" />
+               <img src={bgimg4} className="bg_img" alt="#" />
                <div class="content">
                     <div class="page-title">
                         <h2>Contact Us</h2>
@@ -27,8 +22,8 @@ const Contact = () => {
             </div>
             <div className="contact_info">
             <div className="container-fluid">
-                <div className="row mt-2">
-                    <div className="col-md-4 offset-md-2 d-flex justify-content-between">
+                <div className="row mt-5">
+                    <div className="col-md-8 offset-md-2 d-flex justify-content-between">
                         {/* phone number */}
                         <div className="contact_info_item d-flex justify-content-start align-items-center">
                             <img src={phone} alt="#" className="contact_info_item_iconimage" />
@@ -76,7 +71,7 @@ const Contact = () => {
             {/* contact us form */}
 
             <div className="contact-form">
-                <div className="contact-form-container">
+                <div className="container">
                     <div className="row mb-5">
                         <div className="col-md-8 offset-md-2">
                             <div className="contact_form_container py-5">
@@ -104,9 +99,7 @@ const Contact = () => {
                 </div>
             </div>
         </div>
-        <Footer />
     </>
-    
     );
 }
 

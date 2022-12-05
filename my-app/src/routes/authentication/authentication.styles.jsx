@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Authentication_container = styled.div`
-  height:82vh;
+  height:100vh;
   background-color: white;
   display:flex;
   justify-content:center;

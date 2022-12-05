@@ -125,7 +125,7 @@ const Home = () => {
 
         <BodyCards />
 
-        <p style={{ fontSize: "50px", fontFamily: "'Poppins', sans-serif", fontWeight: "800", color: "#393E46", textAlign: "center", marginTop: "2vh" }}>Price is what you pay. <br /> Value is what you get...</p><br /><br />
+        <p style={{ fontSize: "50px", fontFamily: "'Poppins', sans-serif", fontWeight: "800", color: "#8a946d", textAlign: "center", marginTop: "2vh" }}>Price is what you pay. <br /> Value is what you get...</p><br /><br />
         {/* <MailButton /><br /><br /><br /><br /> */}
         <h1 style={{ "fontFamily": "'Poppins', sans-serif", "fontWeight": "700", "fontSize": "50px", marginBottom: "6vh", textAlign: "center" }}>Explore Real Estate in Popular Indian Cities</h1>
         <div className="directory-div">
@@ -139,7 +139,7 @@ const Home = () => {
         <br /><br /><br /><br />
 
       </div>
-      <Footer></Footer>
+      <Footer />
 
 
 
