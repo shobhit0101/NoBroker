@@ -4,7 +4,12 @@ import Map from './search_components/Map/Map';
 import Results from './search_components/Results/Results';
 import './Search.css';
 import Navigation from '../../routes/navigation/navigation.component';
+import { useDispatch,useSelector } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import {actioncreators} from '../../state/actioncreators'
 const Search = () => {
+  const users=useSelector(state=>state.user_func)
+  console.log(users)
   const [res, setres] = useState([])
   const [curdata, setcurdata] = useState(null)
   const [coords, setcoords] = useState(['54','36'])

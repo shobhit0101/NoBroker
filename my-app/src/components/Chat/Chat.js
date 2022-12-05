@@ -143,6 +143,7 @@ const Chat = () => {
         <div className="container">
           {callAccepted && !callEnded && <video playsInline ref={userVideo} autoPlay/>}
         </div>
+        <div className="container">{id}</div>
         <div className="container">
           {receivingCall && !callAccepted && (
             <>
@@ -162,7 +163,7 @@ const Chat = () => {
         <div className="container">
         <button
                       type="submit"
-                      onClick={() => callUser('Vzeqqcf19L0CN6o-AAAD')}
+                      onClick={() => callUser('PUm9eLl4CyIS8EWBAAET')}
                     >
                       Join
                     </button>

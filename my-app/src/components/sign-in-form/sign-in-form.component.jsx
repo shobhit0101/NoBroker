@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import FormInput from '../form-input/form-input.component';
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
-
+import { useDispatch,useSelector } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import {actioncreators} from '../../state/actioncreators'
 // import {
 //   signInAuthUserWithEmailAndPassword,
 //   signInWithGooglePopup,
@@ -17,6 +19,10 @@ const defaultFormFields = {
 
 const SignInForm = () => {
   //navigation
+  const users=useSelector(state=>state.user_func)
+  const login_id=useSelector(state=>state.login_id)
+  const dispatch=useDispatch()
+  const{login}=bindActionCreators(actioncreators,dispatch)
   const navigate = useNavigate()
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
@@ -35,11 +41,21 @@ const SignInForm = () => {
     try {
       // await signInAuthUserWithEmailAndPassword(email, password);
       console.log(formFields);
+      console.log(users)
+      for(let i=0;i<users.length;i++){
+        if(users[i].email===formFields.email){
+          login(i)
+          console.log(login_id)
+          resetFormFields();
+          return
+        }
+      }
       resetFormFields();
+      alert("login failed")
     } catch (error) {
       console.log('user sign in failed', error);
     }
-    navigate('/home')
+    // navigate('/home')
   };
 
   const handleChange = (event) => {

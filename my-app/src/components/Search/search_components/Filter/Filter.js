@@ -1,8 +1,19 @@
 import React, { useContext,useState,useEffect } from 'react'
+import { useSelector } from 'react-redux';
 import propertyContext from '../../../../context/property/propertyContext';
 import Navigation from '../../../../routes/navigation/navigation.component';
 import "./Filter.css";
 const Filter = (props) => {
+    const users=useSelector(state=>state.user_func)
+    let prop=[]
+
+    for(let u of users){
+      console.log(u)
+      for(let p of u.posted_property){
+
+        prop=prop.concat(p)
+      }
+    }
     const{res,setres}=props
     const [selected, setselected] = useState({
       location:'0',
@@ -15,9 +26,9 @@ const Filter = (props) => {
     })
     const{location,purpose,prop_cat,min_price,max_price,min_area,max_area}=selected
     //destructuring prop context
-    const context=useContext(propertyContext)
-    const{prop}=context
-    console.log(prop)
+    // const context=useContext(propertyContext)
+    // const{prop2}=context
+    // console.log(prop)
     //
     const filterop=()=>{
         // alert("yo")
