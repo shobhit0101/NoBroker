@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import FormInput from '../form-input/form-input.component';
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
-
-import {
-  signInAuthUserWithEmailAndPassword,
-  signInWithGooglePopup,
-} from '../../utils/firebase/firebase.utils';
-
+import { useDispatch,useSelector } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import {actioncreators} from '../../state/actioncreators'
+// import {
+//   signInAuthUserWithEmailAndPassword,
+//   signInWithGooglePopup,
+// } from '../../utils/firebase/firebase.utils';
 
 import { SignInContainer, ButtonsContainer } from './sign-in-form.styles';
 import { useNavigate } from 'react-router-dom';
@@ -18,7 +19,11 @@ const defaultFormFields = {
 
 const SignInForm = () => {
   //navigation
-  // const navigate = useNavigate()
+  const users=useSelector(state=>state.user_func)
+  const login_id=useSelector(state=>state.login_id)
+  const dispatch=useDispatch()
+  const{login}=bindActionCreators(actioncreators,dispatch)
+  const navigate = useNavigate()
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
@@ -36,7 +41,17 @@ const SignInForm = () => {
     try {
       await signInAuthUserWithEmailAndPassword(email, password);
       console.log(formFields);
+      console.log(users)
+      for(let i=0;i<users.length;i++){
+        if(users[i].email===formFields.email){
+          login(i)
+          console.log(login_id)
+          resetFormFields();
+          return
+        }
+      }
       resetFormFields();
+      alert("login failed")
     } catch (error) {
       if (error.code === 'auth/user-not-found') {
         alert('User not found, check your username and try again...')

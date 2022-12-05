@@ -11,7 +11,14 @@ import TellAboutProp from './Postpropform_comp/TellAboutProp';
 import Markonmap from './Postpropform_comp/Markonmap';
 import propertyContext from '../../context/property/propertyContext';
 import Navigation from '../../routes/navigation/navigation.component';
+import { useDispatch,useSelector } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import {actioncreators} from '../../state/actioncreators'
 const PostPropertyForm = () => {
+    const users=useSelector(state=>state.user_func)
+    const login_id=useSelector(state=>state.login_id)
+    const dispatch=useDispatch()
+    const{postprop}=bindActionCreators(actioncreators,dispatch)
     //navigation
     const navigate = useNavigate()
     //
@@ -49,7 +56,8 @@ const PostPropertyForm = () => {
         image: {},
         isimg: 0,
         lat: 28.5,
-        lng: 76.9
+        lng: 76.9,
+        user_id:login_id.state
     }
     //
     const [page, setpage] = useState(1)
@@ -75,6 +83,8 @@ const PostPropertyForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(fields)
+        console.log(login_id)
+        postprop(fields,login_id)
         setProp(prop.concat(fields))
         console.log(prop)
         navigate('/search')
@@ -114,6 +124,8 @@ const PostPropertyForm = () => {
         }
 
     }
+    
+    
     return (
         <>
             <div className="postform_container">

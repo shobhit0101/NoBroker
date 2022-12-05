@@ -3,11 +3,12 @@ import React, { useState,useEffect } from 'react'
 import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, useMap,Marker,Popup,useMapEvents } from 'react-leaflet'
 import icon from 'leaflet/dist/images/marker-icon.png';
+
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import L from 'leaflet';
 import LocationCard from './LocationCard/LocationCard ';
 let DefaultIcon = L.icon({
-    iconUrl: icon,
+    iconUrl: "https://cdn-icons-png.flaticon.com/512/3394/3394645.png",
     iconSize: new L.Point(25, 35)
 });
 

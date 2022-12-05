@@ -1,5 +1,7 @@
 import { useState } from 'react';
-
+import { useDispatch,useSelector } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import {actioncreators} from '../../state/actioncreators'
 import FormInput from '../form-input/form-input.component';
 import Button from '../button/button.component';
 
@@ -11,15 +13,20 @@ import {
 import { SignUpContainer } from './sign-up-form.styles';
 
 const defaultFormFields = {
-  displayName: '',
-  email: '',
-  password: '',
-  confirmPassword: '',
-};
+  username:'',
+  email:'',
+  password:'',
+  posted_property:[],
+  message:[]
+}
 
 const SignUpForm = () => {
+  const users=useSelector(state=>state.user_func)
+  const [confirmPassword, setconfirmPassword] = useState('')
+  const dispatch=useDispatch()
+  const{register}=bindActionCreators(actioncreators,dispatch)
   const [formFields, setFormFields] = useState(defaultFormFields);
-  const { displayName, email, password, confirmPassword } = formFields;
+  const { username, email, password} = formFields;
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -39,8 +46,10 @@ const SignUpForm = () => {
         password
       );
 
-      await createUserDocumentFromAuth(user, { displayName });
-      console.log(formFields);
+      // await createUserDocumentFromAuth(user, { displayName });
+      // console.log(formFields);
+      register(formFields)
+      console.log(users)
       resetFormFields();
     } catch (error) {
       if (error.code === 'auth/email-already-in-use') {
@@ -50,7 +59,9 @@ const SignUpForm = () => {
       }
     }
   };
-
+  const handleconfirmpasswordChange=(e)=>{
+    setconfirmPassword(e.target.value)
+  }
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -67,8 +78,8 @@ const SignUpForm = () => {
           type='text'
           required
           onChange={handleChange}
-          name='displayName'
-          value={displayName}
+          name='username'
+          value={username}
         />
 
         <FormInput
@@ -93,7 +104,7 @@ const SignUpForm = () => {
           label='Confirm Password'
           type='password'
           required
-          onChange={handleChange}
+          onChange={handleconfirmpasswordChange}
           name='confirmPassword'
           value={confirmPassword}
         />
