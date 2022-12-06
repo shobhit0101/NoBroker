@@ -1,4 +1,4 @@
-input {
+.input-class {
     width: 100%;
     padding: 7px 26px;
     background: #ffffff;
@@ -10,7 +10,6 @@ input {
 }
 
 .BoxChat {
-    /* background: #efeae2; */
     margin-top: 20px;
     max-width: 55%;
     margin: auto;
@@ -44,7 +43,6 @@ input {
 }
 
 .msgUser {
-    /* background: white; */
     border-radius: 10px;
     background: #ffffff;
     box-shadow: 5px 5px 10px #bababa,
@@ -68,7 +66,6 @@ input {
     background: #87888b;
     width: 2.5rem;
     margin-left: 5px;
-    /* border-radius: 50%; */
     border-radius: 10px;
     background: #87888b;
     box-shadow: 5px 5px 10px #636365,

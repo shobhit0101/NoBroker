@@ -1,27 +1,14 @@
 .main-container {
     display: flex;
-    /* padding-left: 10px; */
     flex-direction: column;
     background: #ffffff;
-    /* width: 100%;
-    height: 100%; */
 }
 
-/* .video-container {
-    padding: 30px;
-    display: flex;
-    flex-direction: row;
-} */
 
 .my-video video {
     object-fit: cover;
     width: 10rem;
     height: 10rem;
-    /* border: 1px solid #DBA39A; */
-    /* border-radius: 10px;
-    background: #cdeae5;
-    box-shadow: 22px 22px 44px #90a4a0,
-        -22px -22px 44px #ffffff; */
     border-radius: 10px;
     background: #252827;
     box-shadow: 8px 8px 16px #111312,
@@ -35,8 +22,6 @@
 
 .user-video video {
     object-fit: cover;
-    /* width: 35rem;
-    height: 35rem; */
     margin-left: 4rem;
     margin-top: 2rem;
     width: 70%;
@@ -54,10 +39,6 @@
     margin-left: 8rem;
 }
 
-/* .camera-btn:hover {
-    transition: background-color 1s ease;
-    background-color: #ff7f7f;
-} */
 
 .secret-key {
     margin: 3vw;
@@ -65,8 +46,6 @@
 }
 
 .end-btn {
-    /* height: 3rem; */
-    /* width: 4rem; */
     border: none;
     margin: 5vw;
     border-radius: 25px;
@@ -88,28 +67,6 @@
 
 }
 
-/* .fa-video-camera{
-    color: white;
-    margin-top: 5rem;
-    margin-right: 2rem;
-    z-index: 1;
-    cursor: pointer;
-} */
-/* .fa-microphone {
-    color: white;
-    margin-top: 5rem;
-    z-index: 1;
-    cursor: pointer;
-} */
-/* .fa-video-camera:after {
-    position: absolute;
-    content: "/";
-    color: red;
-    font-weight: 700;
-    font-size: 1.7em;
-    left: 7px;
-    top: -10px;
-  } */
 
 .accept-btn {
     border: none;
@@ -143,7 +100,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: linear-gradient(45deg, #2196f3, #ff4685); */
 }
 
 .formmm {
@@ -222,7 +178,6 @@
     border-radius: 25px;
     padding: 12px 24px 12px 24px;
     cursor: pointer;
-    /* background-color: #b2b2ff; */
     background: linear-gradient(45deg, #2196f3, #ff4685);
     transition: background-color 1s ease;
 }

@@ -5,12 +5,9 @@ import {actioncreators} from '../../state/actioncreators'
 import FormInput from '../form-input/form-input.component';
 import Button from '../button/button.component';
 
-import {
-  createAuthUserWithEmailAndPassword,
-  createUserDocumentFromAuth,
-} from '../../utils/firebase/firebase.utils';
 
 import { SignUpContainer } from './sign-up-form.styles';
+import { Link } from 'react-router-dom';
 
 const defaultFormFields = {
   username:'',
@@ -41,10 +38,6 @@ const SignUpForm = () => {
     }
 
     try {
-      const { user } = await createAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
 
       // await createUserDocumentFromAuth(user, { displayName });
       // console.log(formFields);
@@ -110,6 +103,7 @@ const SignUpForm = () => {
         />
         <Button type='submit'>Sign Up</Button>
       </form>
+      <li ><i class="fa fa-external-link"></i><Link className='navLink' to="/chat">chat</Link></li>
     </SignUpContainer>
   );
 };

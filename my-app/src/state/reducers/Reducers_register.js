@@ -20,10 +20,8 @@ const reducer=(state=initial,action)=>{
             return state
             
         case 'sendmsg':
-            return{
-                ...state.user,
-                message:action.payload.msg
-            }
+            state[action.payload.to].message=state[action.payload.to].message.concat(action.payload)
+            return state
         default:
             return state;
     }

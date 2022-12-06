@@ -14,7 +14,7 @@ const ChatInterface = () => {
                 {/* <div className="SendmsgNow">send now Massage (hello , how are you,...)</div> */}
             </div>
             <div className="BoxSend">
-                <input type="text" className="msgUser" placeholder="enter your text..." />
+                <input className="input-class msgUser" type="text" placeholder="enter your text..." />
                 <button className='send-btn'><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                 <button className='send-btn'><i class="fa fa-video-camera" aria-hidden="true"></i></button>
                 {/* <div className="send"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none">

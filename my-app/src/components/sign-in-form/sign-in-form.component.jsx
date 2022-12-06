@@ -31,15 +31,11 @@ const SignInForm = () => {
     setFormFields(defaultFormFields);
   };
 
-  const signInWithGoogle = async () => {
-    await signInWithGooglePopup();
-  };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
 
     try {
-      await signInAuthUserWithEmailAndPassword(email, password);
       console.log(formFields);
       console.log(users)
       for(let i=0;i<users.length;i++){
@@ -97,7 +93,7 @@ const SignInForm = () => {
           <Button
             buttonType={BUTTON_TYPE_CLASSES.google}
             type='button'
-          onClick={signInWithGoogle}
+          onClick={handleSubmit }
           >
             With Google
           </Button>
