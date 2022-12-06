@@ -16,8 +16,8 @@ import PropState from "./context/property/PropState";
 import Search from "./components/Search/Search";
 import AboutUs from "./components/aboutus/aboutus";
 import Contact from "./components/contact/contact";
-import Chat from "./components/Chat/Chat";
-import ChatInterface from "./components/Chat/chat-interface";
+import Chat from "./components/chat/Chat";
+import ChatInterface from "./components/chat/chat-interface";
 
 
 
