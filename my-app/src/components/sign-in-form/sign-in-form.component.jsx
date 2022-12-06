@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import FormInput from '../form-input/form-input.component';
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
-import { useDispatch,useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import {actioncreators} from '../../state/actioncreators'
+import { actioncreators } from '../../state/actioncreators'
 // import {
 //   signInAuthUserWithEmailAndPassword,
 //   signInWithGooglePopup,
@@ -19,14 +19,49 @@ const defaultFormFields = {
 
 const SignInForm = () => {
   //navigation
-  const users=useSelector(state=>state.user_func)
-  const login_id=useSelector(state=>state.login_id)
-  const dispatch=useDispatch()
-  const{login}=bindActionCreators(actioncreators,dispatch)
+  const users = useSelector(state => state.user_func)
+  const login_id = useSelector(state => state.login_id)
+  const dispatch = useDispatch()
+  const { login } = bindActionCreators(actioncreators, dispatch)
   const navigate = useNavigate()
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
+
+  ////////////////////////////
+  // const [values, setValues] = useState({
+  //   username: "",
+  //   email: "",
+  //   birthday: "",
+  //   password: "",
+  //   confirmPassword: "",
+  // });
+
+  const inputs = [
+
+    {
+      id: 1,
+      name: "email",
+      type: "email",
+      placeholder: "Email",
+      errorMessage: "It should be a valid email address!",
+      label: "Email",
+      required: true,
+    },
+    {
+      id: 2,
+      name: "password",
+      type: "password",
+      placeholder: "Password",
+      errorMessage:
+        "Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!",
+      label: "Password",
+      pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
+      required: true,
+    }
+
+  ];
+  ////////////////////////////
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
@@ -38,11 +73,12 @@ const SignInForm = () => {
     try {
       console.log(formFields);
       console.log(users)
-      for(let i=0;i<users.length;i++){
-        if(users[i].email===formFields.email){
+      for (let i = 0; i < users.length; i++) {
+        if (users[i].email === formFields.email) {
           login(i)
           console.log(login_id)
           resetFormFields();
+          navigate('/home');
           return
         }
       }
@@ -57,13 +93,16 @@ const SignInForm = () => {
       }
       console.log('user sign in failed', error);
     }
-    // navigate('/home')
+
+
   };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
 
     setFormFields({ ...formFields, [name]: value });
+
+    // setValues({ ...values, [event.target.name]: event.target.value });
   };
 
   return (
@@ -71,7 +110,17 @@ const SignInForm = () => {
       <h2>Already have an account?</h2>
       <span>Sign in with your email and password</span>
       <form onSubmit={handleSubmit}>
-        <FormInput
+        {inputs.map((input) => (
+          <FormInput
+            key={input.id}
+            {...input}
+            value={formFields[input.name]}
+            onChange={handleChange}
+          />
+        ))}
+
+
+        {/* <FormInput
           label='Email'
           type='email'
           required
@@ -87,13 +136,13 @@ const SignInForm = () => {
           onChange={handleChange}
           name='password'
           value={password}
-        />
+        /> */}
         <ButtonsContainer>
           <Button type='submit'>Sign In</Button>
           <Button
             buttonType={BUTTON_TYPE_CLASSES.google}
             type='button'
-          onClick={handleSubmit }
+            onClick={handleSubmit}
           >
             With Google
           </Button>
