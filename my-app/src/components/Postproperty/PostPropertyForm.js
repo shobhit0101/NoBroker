@@ -31,13 +31,16 @@ const PostPropertyForm = () => {
     const context = useContext(propertyContext)
     const { prop, setProp } = context
     //
-    const backend_fun=async()=>{
+    const backend_clear=async()=>{
         const resp = await fetch('http://localhost:5000/clear', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
         },
-      });
+        });
+    }
+    const backend_fun=async()=>{
+        
       
       const response = await fetch('http://localhost:5000/adduser', {
         method: 'POST',
@@ -49,6 +52,7 @@ const PostPropertyForm = () => {
       
     }
     useEffect(() => {
+        backend_clear()
         backend_fun()
     // eslint-disable-next-line
       
