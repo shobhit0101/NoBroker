@@ -82,7 +82,7 @@ const SignInForm = () => {
           setislogin(1)
           console.log(login_id)
           resetFormFields();
-          navigate('/home');
+          navigate('/dashboard');
           return
         }
       }

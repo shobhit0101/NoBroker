@@ -44,15 +44,15 @@ const PostPropertyForm = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(userstate)
+        body: JSON.stringify(users)
       });
       
     }
     useEffect(() => {
         backend_fun()
-    
+    // eslint-disable-next-line
       
-    }, [userstate])
+    }, [users])
     
     //formdata
     let fdata2 = {
@@ -107,8 +107,8 @@ const PostPropertyForm = () => {
         e.preventDefault();
         console.log(fields)
         console.log(login_id)
-        setuserstate({...userstate[login_id],posted_property:userstate[login_id].posted_property.concat(fields)})
-        backend_fun({...userstate[login_id],posted_property:userstate[login_id].posted_property.concat(fields)})
+        // setuserstate({...userstate[login_id],posted_property:userstate[login_id].posted_property.concat(fields)})
+        // backend_fun({...userstate[login_id],posted_property:userstate[login_id].posted_property.concat(fields)})
         postprop(fields,login_id)
         setProp(prop.concat(fields))
         console.log(prop)
