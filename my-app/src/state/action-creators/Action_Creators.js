@@ -37,3 +37,19 @@ export const login=(i)=>{
     })
   }
 }
+export const updateprofile=(req)=>{
+  return(dispatch)=>{
+    dispatch({
+      type:'update',
+      payload:req
+    })
+  }
+}
+export const deleteprofile=(i)=>{
+  return(dispatch)=>{
+    dispatch({
+      type:'update',
+      payload:i
+    })
+  }
+}

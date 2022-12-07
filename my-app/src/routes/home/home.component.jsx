@@ -10,12 +10,41 @@ import Navigation from "../navigation/navigation.component";
 import "./home.styles.css";
 import "./home_style.scss";
 import Footer from "../../components/Footer/footer";
+import { useState } from 'react';
+import { useDispatch,useSelector } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import {actioncreators} from '../../state/actioncreators'
+import { useEffect } from "react";
 
 // import "../navigation/navigation.component";
 
 
 const Home = () => {
-
+  
+  const dispatch=useDispatch()
+  const{register}=bindActionCreators(actioncreators,dispatch)
+  const fetchdata=async()=>{
+    // let resp = await fetch('http://localhost:5000/fetchall', {
+    //     method: 'GET',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //   });
+    //   let data=await resp.json()
+      const url = `http://localhost:5000/fetchall`; 
+    
+      let resp = await fetch(url);
+      let r = await resp.json()
+      register(r[0].c)
+    return r[0].c
+    
+}
+  useEffect(() => {
+    fetchdata()
+  
+    
+  }, [])
+  
   const categories = [
     {
       id: 1,

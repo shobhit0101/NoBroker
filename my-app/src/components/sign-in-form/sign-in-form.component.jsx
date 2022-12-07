@@ -11,6 +11,7 @@ import { actioncreators } from '../../state/actioncreators'
 
 import { SignInContainer, ButtonsContainer } from './sign-in-form.styles';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const defaultFormFields = {
   email: '',
@@ -19,10 +20,12 @@ const defaultFormFields = {
 
 const SignInForm = () => {
   //navigation
-  const users = useSelector(state => state.user_func)
-  const login_id = useSelector(state => state.login_id)
-  const dispatch = useDispatch()
-  const { login } = bindActionCreators(actioncreators, dispatch)
+  const [islogin, setislogin] = useState(0)
+  const users=useSelector(state=>state.user_func)
+  const login_id=useSelector(state=>state.login_id)
+  console.log(login_id)
+  const dispatch=useDispatch()
+  const{login}=bindActionCreators(actioncreators,dispatch)
   const navigate = useNavigate()
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
@@ -76,6 +79,7 @@ const SignInForm = () => {
       for (let i = 0; i < users.length; i++) {
         if (users[i].email === formFields.email) {
           login(i)
+          setislogin(1)
           console.log(login_id)
           resetFormFields();
           navigate('/home');

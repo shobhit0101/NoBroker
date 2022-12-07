@@ -8,6 +8,7 @@ import Button from '../button/button.component';
 import { useNavigate } from 'react-router-dom';
 import { SignUpContainer } from './sign-up-form.styles';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const defaultFormFields = {
   username: '',
@@ -18,7 +19,8 @@ const defaultFormFields = {
 }
 
 const SignUpForm = () => {
-  const users = useSelector(state => state.user_func)
+  const users=useSelector(state=>state.user_func)
+  const [usersstate, setusersstate] = useState(users)
   const [confirmPassword, setconfirmPassword] = useState('')
   const dispatch = useDispatch()
   const { register } = bindActionCreators(actioncreators, dispatch)
@@ -91,11 +93,27 @@ const SignUpForm = () => {
     }
 
     try {
-
       // await createUserDocumentFromAuth(user, { displayName });
       // console.log(formFields);
+      
+      setusersstate(usersstate.concat(formFields))
+      console.log(usersstate)
+      const resp = await fetch('http://localhost:5000/clear', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      
+      const response = await fetch('http://localhost:5000/adduser', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(usersstate.concat(formFields))
+      });
+      
       register(formFields)
-      console.log(users)
       resetFormFields();
       navigate('/home');
 

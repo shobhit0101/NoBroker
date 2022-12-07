@@ -320,6 +320,114 @@ const Chat = () => {
             </>
           )}
         </div>
+        </div>
+        {/* <div className="my-video" >
+          {stream && <video playsInline ref={myVideo} muted autoPlay />}
+        </div> */}
+        <div className='button-container'>
+          {/* <div className="container"> */}
+          {/* <button className='join-btn' type="submit" onClick={() => callUser('UW5Nvew8DGXVtRKMAAA8')}>
+              Join
+            </button> */}
+          {/* </div> */}
+          <div className="my-video" >
+            {stream && <video playsInline ref={myVideo} muted autoPlay />}
+          </div>
+
+          <div className="secret-key" style={{ "display": "flex", "flexDirection": "column" }}>
+            <h6 style={{ "color": "white" }}>
+              Key: {id}
+            </h6>
+            <CopyToClipboard text={id}>
+              <button style={{
+                "width": "20px", "borderRadius": "5px", "background": "#ffffff", "boxShadow": "4px 4px 4px, -4px -4px 4px", "border": "none", "backgroundColor": "#b2b2ff",
+                "transition": "background-color 1s ease"
+              }} onClick={() => setIsCopied(true)}><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+            </CopyToClipboard>
+            {isCopied ? <span style={{ color: 'red' }}>Copied.</span> : null}
+          </div>
+
+          <button className='end-btn' type="submit" >
+            End
+          </button>
+
+          {/* <button className='end-btn' type="submit" onClick={() => callUser('UW5Nvew8DGXVtRKMAAA8')}>
+            End
+          </button> */}
+          <button style={{ "width": "70px", "height": "25px", "zIndex": "1", "marginTop": "4.5rem", "marginRight": "2rem", "border": "none", "borderRadius": "70px" }}><i class="fa fa-video-camera" aria-hidden="true"></i></button>
+          <button style={{ "width": "70px", "height": "25px", "zIndex": "1", "marginTop": "4.5rem", "border": "none", "borderRadius": "70px" }}><i class="fa fa-microphone" aria-hidden="true"></i></button>
+
+
+
+          <div className="container">
+            {receivingCall && !callAccepted && (
+              <>
+                <span>{name}</span>
+                <button className="accept-btn" onClick={answerCall}>Accept</button>
+              </>
+            )}
+          </div>
+
+
+        </div>
+      </div>}
+      {!oncall && <div className='main-container' >
+        <div className='video-container' style={{ "padding": "30px" }}>
+          <div className="my-video" >
+            {stream && <video style={{ "height": "50%", "width": "50%" }} playsInline ref={myVideo} muted autoPlay />}
+          </div>
+          {/* <div className="user-video"> */}
+          {/* {callAccepted && !callEnded && <video playsInline ref={userVideo} autoPlay />}
+            {<video style={{ "height": "85%", "width": "90%" }} playsInline ref={myVideo} autoPlay />} */}
+          {/* </div> */}
+          <div className='button-container' style={{ "marginLeft": "15rem", "marginTop": "-8rem" }}>
+            <button className='camera-btn' style={{ "width": "70px", "height": "25px", "zIndex": "1", "marginTop": "4.5rem", "marginRight": "2rem", "border": "none", "borderRadius": "70px", "background": "linear-gradient(45deg, #2196f3, #ff4685)", "boxShadow": "5px 5px 10px #ba8282, -5px -5px 10px #ffe2e2" }}><i class="fa fa-video-camera" aria-hidden="true"></i></button>
+            <button style={{ "width": "70px", "height": "25px", "zIndex": "1", "marginTop": "4.5rem", "border": "none", "borderRadius": "70px", "background": "linear-gradient(45deg, #2196f3, #ff4685)", "boxShadow": "5px 5px 10px #ba8282, -5px -5px 10px #ffe2e2" }}><i class="fa fa-microphone" aria-hidden="true"></i></button>
+          </div>
+        </div>
+        {/* <div className="my-video" >
+          {stream && <video playsInline ref={myVideo} muted autoPlay />}
+        </div> */}
+        {/* <div className='button-container' style={{ "marginLeft": "15rem", "marginTop": "-10rem" }}> */}
+        {/* <div className="container">
+            <input type='text' value={cur_code} onChange={oncodeChange}></input>
+            <button className='join-btn' type="submit" onClick={() => callUser(cur_code)}>
+              Join
+            </button>
+          </div> */}
+        {/* <div className="my-video" >
+            {stream && <video  playsInline ref={myVideo} muted autoPlay />}
+          </div> */}
+
+        {/* <div className="secret-key" style={{ "display": "flex", "flexDirection": "column" }}>
+            <h6 style={{ "color": "black" }}>
+              Key: {id}
+            </h6>
+            <CopyToClipboard text={id}>
+              <button style={{
+                "width": "20px", "borderRadius": "5px", "background": "#ffffff", "boxShadow": "4px 4px 4px, -4px -4px 4px", "border": "none", "backgroundColor": "#b2b2ff",
+                "transition": "background-color 1s ease"
+              }} onClick={() => setIsCopied(true)}><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+            </CopyToClipboard>
+            {isCopied ? <span style={{ color: 'red' }}>Copied.</span> : null}
+          </div> */}
+
+        {/* <button className='end-btn' type="submit" onClick={() => callUser('UW5Nvew8DGXVtRKMAAA8')}>
+            End
+          </button> */}
+        {/* <button className='camera-btn' style={{ "width": "70px", "height": "25px", "zIndex": "1", "marginTop": "4.5rem", "marginRight": "2rem", "border": "none", "borderRadius": "70px", "background": "#ffb2b2", "boxShadow": "5px 5px 10px #ba8282, -5px -5px 10px #ffe2e2" }}><i class="fa fa-video-camera" aria-hidden="true"></i></button>
+          <button style={{ "width": "70px", "height": "25px", "zIndex": "1", "marginTop": "4.5rem", "border": "none", "borderRadius": "70px", "background": "#ffb2b2", "boxShadow": "5px 5px 10px #ba8282, -5px -5px 10px #ffe2e2" }}><i class="fa fa-microphone" aria-hidden="true"></i></button> */}
+
+
+
+        <div className="container">
+            {receivingCall && !callAccepted && (
+              <>
+                <span>{name}</span>
+                <button className="accept-btn" onClick={answerCall}>Accept</button>
+              </>
+            )}
+          </div>
 
 
         {/* </div> */}
