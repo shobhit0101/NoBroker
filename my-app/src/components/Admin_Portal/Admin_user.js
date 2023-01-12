@@ -54,7 +54,7 @@ const Admin_user = () => {
                 <AdminUserTableContainer></AdminUserTableContainer>
                 <AdminUserTableContainer></AdminUserTableContainer>
                 <AdminUserTableContainer></AdminUserTableContainer>
-                <AdminUserTableContainer></AdminUserTableContainer>
+
 
 
                 <nav aria-label="...">

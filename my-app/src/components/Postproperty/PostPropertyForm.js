@@ -11,15 +11,15 @@ import TellAboutProp from './Postpropform_comp/TellAboutProp';
 import Markonmap from './Postpropform_comp/Markonmap';
 import propertyContext from '../../context/property/propertyContext';
 import Navigation from '../../routes/navigation/navigation.component';
-import { useDispatch,useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import {actioncreators} from '../../state/actioncreators'
+import { actioncreators } from '../../state/actioncreators'
 const PostPropertyForm = () => {
-    const users=useSelector(state=>state.user_func)
+    const users = useSelector(state => state.user_func)
     const [userstate, setuserstate] = useState(users)
-    const login_id=useSelector(state=>state.login_id)
-    const dispatch=useDispatch()
-    const{postprop}=bindActionCreators(actioncreators,dispatch)
+    const login_id = useSelector(state => state.login_id)
+    const dispatch = useDispatch()
+    const { postprop } = bindActionCreators(actioncreators, dispatch)
     //navigation
     const navigate = useNavigate()
     //
@@ -31,29 +31,29 @@ const PostPropertyForm = () => {
     const context = useContext(propertyContext)
     const { prop, setProp } = context
     //
-    const backend_fun=async()=>{
+    const backend_fun = async () => {
         const resp = await fetch('http://localhost:5000/clear', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      
-      const response = await fetch('http://localhost:5000/adduser', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(userstate)
-      });
-      
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        const response = await fetch('http://localhost:5000/adduser', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userstate)
+        });
+
     }
     useEffect(() => {
         backend_fun()
-    
-      
+
+
     }, [userstate])
-    
+
     //formdata
     let fdata2 = {
         city: "",
@@ -80,7 +80,7 @@ const PostPropertyForm = () => {
         isimg: 0,
         lat: 28.5,
         lng: 76.9,
-        user_id:login_id.state
+        user_id: login_id.state
     }
     //
     const [page, setpage] = useState(1)
@@ -107,9 +107,9 @@ const PostPropertyForm = () => {
         e.preventDefault();
         console.log(fields)
         console.log(login_id)
-        setuserstate({...userstate[login_id],posted_property:userstate[login_id].posted_property.concat(fields)})
-        backend_fun({...userstate[login_id],posted_property:userstate[login_id].posted_property.concat(fields)})
-        postprop(fields,login_id)
+        // setuserstate({...userstate[login_id],posted_property:userstate[login_id].posted_property.concat(fields)})
+        // backend_fun({ ...userstate[login_id], posted_property: userstate[login_id].posted_property.concat(fields) })
+        postprop(fields, login_id)
         setProp(prop.concat(fields))
         console.log(prop)
         navigate('/search')
@@ -149,8 +149,8 @@ const PostPropertyForm = () => {
         }
 
     }
-    
-    
+
+
     return (
         <>
             <div className="postform_container">
