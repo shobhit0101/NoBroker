@@ -49,6 +49,7 @@ const PostPropertyForm = () => {
 
     }
     useEffect(() => {
+        backend_clear()
         backend_fun()
 
 

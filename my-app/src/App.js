@@ -18,6 +18,7 @@ import AboutUs from "./components/aboutus/aboutus";
 import Contact from "./components/contact/contact";
 import Chat from "./components/chat/Chat";
 import ChatInterface from "./components/chat/chat-interface";
+import DashBoard from "./components/DashBoard/DashBoard";
 
 
 
@@ -46,6 +47,7 @@ function App() {
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/chat" element={<Chat />} />
             <Route exact path="/chat-interface" element={<ChatInterface />} />
+            <Route exact path="/dashboard" element={<DashBoard />} />
 
 
           </Routes>
